@@ -58,5 +58,8 @@
       "esbuild",
       "unrs-resolver"
     ]
-  }
+  },
+  "trustedDependencies": [
+    "unrs-resolver"
+  ]
 }
