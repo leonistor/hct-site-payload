@@ -1,0 +1,37 @@
+[
+  {
+    "id": "panizzolo",
+    "name": "Panizzolo",
+    "url": "https://www.panizzolo.com/en/"
+  },
+  {
+    "id": "husmann",
+    "name": "Husmann",
+    "url": "https://husmann-umwelt-technik.de/?lang=en"
+  },
+  {
+    "id": "mistra",
+    "name": "Mistra",
+    "url": "https://mistra.cz/"
+  },
+  {
+    "id": "bronneberg",
+    "name": "Bronneberg",
+    "url": "https://www.bronneberg-recycling.co.uk/"
+  },
+  {
+    "id": "iris",
+    "name": "Iris Mec",
+    "url": "https://www.iris-mec.com/"
+  },
+  {
+    "id": "holmatro",
+    "name": "Holmatro",
+    "url": "https://www.holmatro.com/en/rescue/cutting-spreading/cutters"
+  },
+  {
+    "id": "tecno",
+    "name": "Tecnoecology",
+    "url": "https://tecnoecology.com/en/"
+  }
+]

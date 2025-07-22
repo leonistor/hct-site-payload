@@ -1,0 +1,32 @@
+[
+  {
+    "denumire": "Echipamente pentru tăiere și dezmembrare",
+    "icon": "scissors-line-dashed",
+    "import_parteneri": "panizzolo, tecno, mistra, bronneberg, holmatro"
+  },
+  {
+    "denumire": "Prese de balotat și compactoare",
+    "icon": "wind-arrow-down",
+    "import_parteneri": "bronneberg, husmann"
+  },
+  {
+    "denumire": "Echipamente pentru tocare, mărunțire și granulare",
+    "icon": "server-cog",
+    "import_parteneri": "panizzolo, tecno, bronneberg"
+  },
+  {
+    "denumire": "Dezmembrare vehicule și motoare",
+    "icon": "car",
+    "import_parteneri": "iris"
+  },
+  {
+    "denumire": "Recuperare, stocare și analiză fluide",
+    "icon": "flask-round",
+    "import_parteneri": "iris"
+  },
+  {
+    "denumire": "Sisteme de sortare",
+    "icon": "component",
+    "import_parteneri": "panizzolo, tecno, bronneberg"
+  }
+]
