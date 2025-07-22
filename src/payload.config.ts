@@ -62,5 +62,9 @@ export default buildConfig({
       scriptPath: path.resolve(dirname, 'scripts/clean.ts'),
       key: 'clean',
     },
+    {
+      scriptPath: path.resolve(dirname, 'scripts/promo.ts'),
+      key: 'promo',
+    },
   ],
 })

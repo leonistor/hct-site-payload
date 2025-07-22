@@ -249,6 +249,10 @@ export interface Produse {
   descriere?: string | null;
   partener?: (number | null) | Parteneri;
   categorie?: (number | null) | Categorii;
+  /**
+   * Promovat in liste produse
+   */
+  promo?: boolean | null;
   materiale?: (number | Materiale)[] | null;
   imagini?:
     | {
@@ -586,6 +590,7 @@ export interface ProduseSelect<T extends boolean = true> {
   descriere?: T;
   partener?: T;
   categorie?: T;
+  promo?: T;
   materiale?: T;
   imagini?: T;
   url_producator?: T;
