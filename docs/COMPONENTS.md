@@ -1,3 +1,29 @@
+## extra packages:
+
+```
+@radix-ui/react-accordion
+@radix-ui/react-dialog
+@radix-ui/react-dropdown-menu
+@radix-ui/react-icons
+@radix-ui/react-navigation-menu
+@radix-ui/react-separator
+@radix-ui/react-slot
+@tabler/icons-react
+@topcli/prompts
+clsx
+embla-carousel-react
+es-toolkit
+flowers-nextjs-table
+framer-motion
+lucide-react
+motion
+next-themes
+qs-esm
+radix-ui
+swr
+tailwindcss-animate
+```
+
 ## components to use
 
 navbar (yay!)
