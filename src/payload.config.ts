@@ -1,6 +1,7 @@
 // storage-adapter-import-placeholder
 import { sqliteAdapter } from '@payloadcms/db-sqlite'
 import { payloadCloudPlugin } from '@payloadcms/payload-cloud'
+import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import path from 'path'
 import { buildConfig } from 'payload'
@@ -22,6 +23,7 @@ export default buildConfig({
   },
   collections: [Users, Media],
   editor: lexicalEditor(),
+  cors: '*',
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
@@ -32,8 +34,28 @@ export default buildConfig({
     },
   }),
   sharp,
+  email: nodemailerAdapter({
+    defaultFromAddress: 'info@payloadcms.com',
+    defaultFromName: 'Payload',
+    // Nodemailer transportOptions
+    transportOptions: {
+      host: 'pop-os.lan',
+      port: '1025',
+      auth: false,
+    },
+  }),
   plugins: [
     payloadCloudPlugin(),
     // storage-adapter-placeholder
+  ],
+  bin: [
+    {
+      scriptPath: path.resolve(dirname, 'scripts/seed.ts'),
+      key: 'seed',
+    },
+    {
+      scriptPath: path.resolve(dirname, 'scripts/clean.ts'),
+      key: 'clean',
+    },
   ],
 })
