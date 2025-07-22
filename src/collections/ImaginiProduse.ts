@@ -1,20 +1,20 @@
 import type { CollectionConfig } from 'payload'
 
-export const Media: CollectionConfig = {
-  slug: 'media',
+export const ImaginiProduse: CollectionConfig = {
+  slug: 'imgprod',
+  labels: {
+    singular: 'Imagine Produs',
+    plural: 'Imagini Produse',
+  },
   access: {
     read: () => true,
   },
   fields: [
-    {
-      name: 'alt',
-      type: 'text',
-      required: true,
-    },
+    { name: 'alt', type: 'text', required: false },
+    { name: 'partener', type: 'relationship', relationTo: 'parteneri', required: false },
   ],
   upload: {
-    staticDir: 'public/media',
-    adminThumbnail: 'thumbnail',
+    staticDir: 'public/imgprod',
     mimeTypes: ['image/*'],
     displayPreview: true,
     imageSizes: [
