@@ -13,7 +13,16 @@ export const Parteneri: CollectionConfig = {
   fields: [
     { name: 'cod', type: 'text', required: true },
     { name: 'nume', type: 'text', required: true },
-    { name: 'logo', type: 'relationship', relationTo: 'media' },
+    {
+      name: 'logo',
+      type: 'relationship',
+      relationTo: 'media',
+      admin: {
+        components: {
+          Cell: 'src/components/admin/CustomImageCell#MyComponent',
+        },
+      },
+    },
     { name: 'descriere', type: 'textarea' },
     { name: 'url', type: 'text' },
   ],
