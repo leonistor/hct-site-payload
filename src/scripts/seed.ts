@@ -12,6 +12,16 @@ async function readFile(fileName: string): Promise<string> {
   return content
 }
 
+function slugify(str: string): string {
+  str = str.replace(/^\s+|\s+$/g, '') // trim leading/trailing white space
+  str = str.toLowerCase() // convert string to lowercase
+  str = str
+    .replace(/[^a-z0-9 -]/g, '') // remove any non-alphanumeric characters
+    .replace(/\s+/g, '-') // replace spaces with hyphens
+    .replace(/-+/g, '-') // remove consecutive hyphens
+  return str
+}
+
 /** main script */
 export const script = async (config: SanitizedConfig) => {
   await payload.init({ config })
@@ -35,20 +45,44 @@ export const script = async (config: SanitizedConfig) => {
     imgUrl: string
     img: string
   }[]
-  const categorii_txt = await readFile('categorii.txt')
-  const imp_categorii = categorii_txt.split('\n')
+  const imp_categorii = JSON.parse(await readFile('categorii.json')) as {
+    denumire: string
+    icon: string
+    import_parteneri: string
+  }[]
+  const imp_materiale = JSON.parse(await readFile('materiale.json')) as {
+    denumire: string
+    denumire_en: string
+    icon: string
+  }[]
 
   // categorii
   result = imp_categorii.map(async (c) => {
     await payload.create({
       collection: 'categorii',
       data: {
-        denumire: c,
+        denumire: c.denumire,
+        icon: c.icon,
+        import_parteneri: c.import_parteneri,
       },
     })
   })
   await Promise.all(result)
   payload.logger.info('done: Categorii')
+
+  // materiale
+  result = imp_materiale.map(async (c) => {
+    await payload.create({
+      collection: 'materiale',
+      data: {
+        denumire: c.denumire,
+        denumire_en: c.denumire_en,
+        icon: c.icon,
+      },
+    })
+  })
+  await Promise.all(result)
+  payload.logger.info('done: Materiale')
 
   // parteneri
   result = imp_partners.map(async (p) => {
@@ -84,7 +118,7 @@ export const script = async (config: SanitizedConfig) => {
 
   // --- produse
   // imgprod_placeholder
-  await payload.create({
+  const placeholder = await payload.create({
     collection: 'imgprod',
     filePath: PLACEHOLDER,
     data: { alt: 'Image Placeholder' },
@@ -97,7 +131,7 @@ export const script = async (config: SanitizedConfig) => {
     let imageOK = true
     const imageFilePath = `${BASE}photos/${partner}/${img}`
 
-    // check if image exists
+    // check if image exists in import data
     if (img.length > 0) {
       if (!existsSync(imageFilePath)) {
         imageOK = false
@@ -108,55 +142,44 @@ export const script = async (config: SanitizedConfig) => {
       payload.logger.warn(`${partner} ${name} has no image`)
     }
 
+    // upload image
+    const image_filename = partner + '__' + slugify(name)
+    const uploadedImage = await payload
+      .create({
+        collection: 'imgprod',
+        data: {
+          alt: `${partner} ${name}`,
+          filename: image_filename,
+        },
+        filePath: imageFilePath,
+      })
+      .catch((error) => {
+        payload.logger.error(`imgprod error: ${imageFilePath}, ${JSON.stringify(error)}`)
+      })
+
     // get partener from code
     const partener = created_partneri.get(partner)
 
-    if (imageOK) {
-      // create produs with image
-      const uploadedImage = await payload
-        .create({
-          collection: 'imgprod',
-          data: { alt: `${partner} ${name}` },
-          filePath: imageFilePath,
-        })
-        .catch((error) => {
-          payload.logger.error(`imgprod error: ${imageFilePath}, ${JSON.stringify(error)}`)
-        })
-      await payload.create({
-        collection: 'produse',
-        data: {
-          nume: name,
-          descriere: desc,
-          partener: partener,
-          imagini: [
-            {
-              relationTo: 'imgprod',
-              value: uploadedImage!,
-            },
-          ],
-          url_producator: url,
-          import_img_name: img,
-          import_cod_partener: partner,
-          import_categorie: categ,
-        },
-      })
-    } else {
-      // create produs without image
-      await payload.create({
-        collection: 'produse',
-        data: {
-          nume: name,
-          descriere: desc,
-          partener: partener,
-          imagini: [],
-          url_producator: url,
-          import_img_name: img,
-          import_cod_partener: partner,
-          import_categorie: categ,
-        },
-      })
-    }
-    // payload.logger.info(`created produs: ${name}`)
+    // create produs with image
+    await payload.create({
+      collection: 'produse',
+      data: {
+        nume: name,
+        descriere: desc,
+        partener: partener,
+        imagini: [
+          {
+            relationTo: 'imgprod',
+            value: imageOK ? uploadedImage! : placeholder,
+          },
+        ],
+        url_producator: url,
+        import_img_name: img,
+        import_cod_partener: partner,
+        import_categorie: categ,
+      },
+    })
+    payload.logger.info(`created produs: ${name}`)
   })
   await Promise.all(result)
   payload.logger.info('done: Produse')
