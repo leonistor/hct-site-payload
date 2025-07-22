@@ -1,67 +1,103 @@
-# Payload Blank Template
+# Payload for HCT
 
-This template comes configured with the bare minimum to get started on anything you need.
+## content
 
-## Quick start
+- categorii gata in payload, la desc gasesti partenerii cu ele
+- all products from pocketbase
 
-This template can be deployed directly from our Cloud hosting and it will setup MongoDB and cloud S3 object storage for media.
+## TODO
 
-## Quick Start - local setup
+- [ ] site v0.1 (despre noi pe prima pagina) saptamana asta
+- [ ] propuneri logo catre Seba pentru Ioana
+- [ ] "draft" la produse
+- [x] clean db script
+- [x] imgprod missing placeholder with logo
+- [x] use falso fake data
+- [x] random materiale in produs (es-toolkit sampleSize)
+- [ ] display collection count in admin dashboard: see `payload-theme-quantum-leap`
+- [ ] beautify lists in admin
+- [ ] i18n ro
+- [ ] docker deploy (see articles below)
+- [ ] mailer
+- [x] versions/drafts? NEIN (https://payloadcms.com/docs/versions/overview)
 
-To spin up this template locally, follow these steps:
+## components
 
-### Clone
+see [COMPONENTS.md](docs/COMPONENTS.md)
 
-After you click the `Deploy` button above, you'll want to have standalone copy of this repo on your machine. If you've already cloned this repo, skip to [Development](#development).
+## packages
 
-### Development
+- Node.js user prompt library for command-line interfaces.: https://github.com/TopCli/prompts
+- es-toolkit: https://es-toolkit.dev/usage.html
+- Falso Fake Data for All Your Real Needs: https://ngneat.github.io/falso/docs/getting-started
 
-1. First [clone the repo](#clone) if you have not done so already
-2. `cd my-project && cp .env.example .env` to copy the example environment variables. You'll need to add the `MONGODB_URI` from your Cloud project to your `.env` if you want to use S3 storage and the MongoDB database that was created for you.
+## tools
 
-3. `pnpm install && pnpm dev` to install dependencies and start the dev server
-4. open `http://localhost:3000` to open the app in your browser
+- emoji picker: https://www.freetool.dev/emoji-picker/
+- GitHub - cloudfour/simple-svg-placeholder: A very simple placeholder image generator with zero dependencies.: https://github.com/cloudfour/simple-svg-placeholder
 
-That's it! Changes made in `./src` will be reflected in your app. Follow the on-screen instructions to login and create your first admin user. Then check out [Production](#production) once you're ready to build and serve your app, and [Deployment](#deployment) when you're ready to go live.
+## favicon
 
-#### Docker (Optional)
+- https://realfavicongenerator.net/
 
-If you prefer to use Docker for local development instead of a local MongoDB instance, the provided docker-compose.yml file can be used.
+## articles
 
-To do so, follow these steps:
+see [DEPLOY.md](docs/DEPLOY.md).
 
-- Modify the `MONGODB_URI` in your `.env` file to `mongodb://127.0.0.1/<dbname>`
-- Modify the `docker-compose.yml` file's `MONGODB_URI` to match the above `<dbname>`
-- Run `docker-compose up` to start the database, optionally pass `-d` to run in the background.
+- Running Next.js with Docker: https://markus.oberlehner.net/blog/running-nextjs-with-docker
+- Deploying a Next.js app to production using Docker: https://codeparrot.ai/blogs/deploy-nextjs-app-with-docker-complete-guide-for-2025
 
-## How it works
+## take from payload (examples/templates):
 
-The Payload config is tailored specifically to the needs of most websites. It is pre-configured in the following ways:
+- move nextjs toolbar (nextjs config)
 
-### Collections
+```js
+devIndicators: {
+    position: 'bottom-right',
+  },
 
-See the [Collections](https://payloadcms.com/docs/configuration/collections) docs for details on how to extend this functionality.
+```
 
-- #### Users (Authentication)
+- Media collection
 
-  Users are auth-enabled collections that have access to the admin panel.
-
-  For additional help, see the official [Auth Example](https://github.com/payloadcms/payload/tree/main/examples/auth) or the [Authentication](https://payloadcms.com/docs/authentication/overview#authentication-overview) docs.
-
-- #### Media
-
-  This is the uploads enabled collection. It features pre-configured sizes, focal point and manual resizing to help you manage your pictures.
-
-### Docker
-
-Alternatively, you can use [Docker](https://www.docker.com) to spin up this template locally. To do so, follow these steps:
-
-1. Follow [steps 1 and 2 from above](#development), the docker-compose file will automatically use the `.env` file in your project root
-1. Next run `docker-compose up`
-1. Follow [steps 4 and 5 from above](#development) to login and create your first admin user
-
-That's it! The Docker instance will help you get up and running quickly while also standardizing the development environment across your teams.
-
-## Questions
-
-If you have any issues or questions, reach out to us on [Discord](https://discord.com/invite/payload) or start a [GitHub discussion](https://github.com/payloadcms/payload/discussions).
+```js
+upload: {
+    // Upload to the public/media directory in Next.js making them publicly accessible even outside of Payload
+    staticDir: path.resolve(dirname, '../../public/media'),
+    adminThumbnail: 'thumbnail',
+    focalPoint: true,
+    imageSizes: [
+      {
+        name: 'thumbnail',
+        width: 300,
+      },
+      {
+        name: 'square',
+        width: 500,
+        height: 500,
+      },
+      {
+        name: 'small',
+        width: 600,
+      },
+      {
+        name: 'medium',
+        width: 900,
+      },
+      {
+        name: 'large',
+        width: 1400,
+      },
+      {
+        name: 'xlarge',
+        width: 1920,
+      },
+      {
+        name: 'og',
+        width: 1200,
+        height: 630,
+        crop: 'center',
+      },
+    ],
+  },
+```
