@@ -22,6 +22,7 @@ import Image from 'next/image'
 import { navigationLinks } from '@/config/menu'
 import Link from 'next/link'
 import ModeToggle from './theme-switch'
+import LangSelect from './lang-select'
 
 export default function Navbar() {
   return (
@@ -196,7 +197,7 @@ export default function Navbar() {
             <ModeToggle />
           </Button>
           <Button asChild size="sm" className="text-sm">
-            <a href="#">Ro</a>
+            <LangSelect />
           </Button>
         </div>
       </div>
