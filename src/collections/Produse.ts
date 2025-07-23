@@ -21,10 +21,17 @@ export const Produse: CollectionConfig = {
         singular: 'Versiune',
         plural: 'Versiuni',
       },
+
       fields: [
         { name: 'cod', type: 'text' },
         { name: 'descriere', type: 'text' },
       ],
+      admin: {
+        description: 'Versiuni de produs',
+        initCollapsed: true,
+        disableListFilter: true,
+        disableBulkEdit: true,
+      },
     },
     {
       name: 'promo',

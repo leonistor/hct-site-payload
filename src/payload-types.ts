@@ -249,6 +249,9 @@ export interface Produse {
   descriere?: string | null;
   partener?: (number | null) | Parteneri;
   categorie?: (number | null) | Categorii;
+  /**
+   * Versiuni de produs
+   */
   versiuni?:
     | {
         cod?: string | null;

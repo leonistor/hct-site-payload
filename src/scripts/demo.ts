@@ -2,15 +2,14 @@ import { sampleSize } from 'es-toolkit'
 import type { SanitizedConfig } from 'payload'
 import payload from 'payload'
 
-// TODO: fake data
-
 const SIZE = 8
 
 /** main script */
 export const script = async (config: SanitizedConfig) => {
   await payload.init({ config })
 
-  payload.logger.info('oferta=true pentru random 8 products')
+  payload.logger.info('oferta si demo')
+  payload.logger.info(`oferta=true pentru random ${SIZE} products`)
 
   const all_ids = (
     await payload.find({
@@ -32,6 +31,8 @@ export const script = async (config: SanitizedConfig) => {
     },
   })
   console.log('errors: ', result.errors)
+
+  payload.logger.info('demo content')
 
   payload.logger.info('✅ Done!')
 }
