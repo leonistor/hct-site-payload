@@ -20,6 +20,7 @@ import Image from 'next/image'
 
 // Navigation links array to be used in both desktop and mobile menus
 import { navigationLinks } from '@/config/menu'
+import Link from 'next/link'
 
 export default function Navbar() {
   return (
@@ -107,9 +108,9 @@ export default function Navbar() {
           </Popover>
           {/* Main nav */}
           <div className="flex items-center gap-6">
-            <a href="#" className="text-primary hover:text-primary/90">
+            <Link href="/" className="text-primary hover:text-primary/90">
               <Image src={logo} alt="logo" priority loading="eager" />
-            </a>
+            </Link>
             {/* Navigation menu */}
             <NavigationMenu viewport={false} className="max-md:hidden">
               <NavigationMenuList className="gap-2">

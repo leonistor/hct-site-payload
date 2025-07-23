@@ -9,49 +9,54 @@ interface MenuItem {
 }
 
 export const navigationLinks: Partial<MenuItem>[] = [
-  { href: '#', label: 'Despre noi' },
-  { href: '/lista', label: 'Lista' },
+  {
+    label: 'Companie',
+    submenu: true,
+    type: 'simple',
+    items: [
+      {
+        href: '/despre',
+        label: 'Despre noi',
+      },
+      {
+        href: '/parteneri',
+        label: 'Parteneri',
+      },
+      {
+        href: '/clienti',
+        label: 'Clienți și proiecte',
+      },
+    ],
+  },
   {
     label: 'Produse',
     submenu: true,
     type: 'description',
     items: [
       {
-        href: '#',
-        label: 'Components',
-        description: 'Browse all components in the library.',
+        href: '/categorii',
+        label: 'Categorii',
+        description:
+          'Echipamente pentru tăiere, dezmembrare tocare, mărunțire și granulare. Prese de balotat și compactoare. Dezmembrare vehicule și motoare. Recuperare, stocare și analiză fluide. Sisteme de sortare',
       },
       {
-        href: '#',
-        label: 'Documentation',
-        description: 'Learn how to use the library.',
+        href: '/materiale',
+        label: 'Materiale',
+        description:
+          'Reciclarea metalelor, aluminiului, cablurilor. Vehicule scoase din uz, Motoare, DEEE, Hidrapulper. Deșeuri solide urbane. Conserve. Metale mixte.',
       },
-      {
-        href: '#',
-        label: 'Templates',
-        description: 'Pre-built layouts for common use cases.',
-      },
-    ],
-  },
-  {
-    label: 'Parteneri',
-    submenu: true,
-    type: 'simple',
-    items: [
-      { href: '#', label: 'Product A' },
-      { href: '#', label: 'Product B' },
-      { href: '#', label: 'Product C' },
-      { href: '#', label: 'Product D' },
     ],
   },
   {
     label: 'Servicii',
     submenu: true,
-    type: 'icon',
+    type: 'simple',
     items: [
-      { href: '#', label: 'Getting Started', icon: 'BookOpenIcon' },
-      { href: '#', label: 'Tutorials', icon: 'LifeBuoyIcon' },
-      { href: '#', label: 'About Us', icon: 'InfoIcon' },
+      { label: 'Instalare și montaj', href: '/servicii-instalare' },
+      { label: 'Întreținere și recondiționare', href: '/servicii-intretinere' },
+      { label: 'Consumabile', href: '/consumabile' },
     ],
   },
+  { href: '/blog', label: 'Noutăți' },
+  { href: '/contact', label: 'Contact' },
 ]
