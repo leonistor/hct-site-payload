@@ -163,6 +163,7 @@ export const script = async (config: SanitizedConfig) => {
     // create produs with image
     await payload.create({
       collection: 'produse',
+      draft: true,
       data: {
         nume: name,
         descriere: desc,

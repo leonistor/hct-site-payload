@@ -5,21 +5,21 @@
     "img_count": 1,
     "promo": "false"
   },
-  { "name": "RecycleMax Baler 05C", "img_count": 3, "promo": "false" },
+  { "name": "RecycleMax Baler 05C", "img_count": 3, "promo": "true" },
   { "name": "CleanCycle Washer", "img_count": 1, "promo": "false" },
   { "name": "WasteTracker Analytics Recycling", "img_count": 1, "promo": "false" },
   {
     "name": "SortSmart AI Machine learning sorting optimization",
     "img_count": 3,
-    "promo": "false"
+    "promo": "true"
   },
   { "name": "GreenMetrics Dashboard Sustainability", "img_count": 2, "promo": "false" },
-  { "name": "CircularFlow Manager", "img_count": 2, "promo": "false" },
+  { "name": "CircularFlow Manager", "img_count": 2, "promo": "true" },
   { "name": "PurifyTech Separator Multi-material", "img_count": 3, "promo": "false" },
   {
     "name": "EcoShred Industrial - Heavy-duty material shredding equipment",
     "img_count": 1,
-    "promo": "false"
+    "promo": "true"
   },
   { "name": "ReGen Pelletizer", "img_count": 1, "promo": "false" },
   {
@@ -27,8 +27,8 @@
     "img_count": 1,
     "promo": "false"
   },
-  { "name": "GreenFleet Tracker", "img_count": 4, "promo": "false" },
+  { "name": "GreenFleet Tracker", "img_count": 4, "promo": "true" },
   { "name": "EcoBin Smart 4000", "img_count": 1, "promo": "false" },
-  { "name": "RecycleLink Logistics", "img_count": 2, "promo": "false" },
+  { "name": "RecycleLink Logistics", "img_count": 2, "promo": "true" },
   { "name": "ZeroWaste Hub Community recycling center solution", "img_count": 5, "promo": "false" }
 ]

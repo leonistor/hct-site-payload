@@ -271,6 +271,7 @@ export interface Produse {
   import_categorie?: string | null;
   updatedAt: string;
   createdAt: string;
+  _status?: ('draft' | 'published') | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -611,6 +612,7 @@ export interface ProduseSelect<T extends boolean = true> {
   import_categorie?: T;
   updatedAt?: T;
   createdAt?: T;
+  _status?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

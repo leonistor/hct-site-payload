@@ -25,6 +25,14 @@ export default buildConfig({
     importMap: {
       baseDir: path.resolve(dirname),
     },
+    autoLogin:
+      process.env.NODE_ENV === 'development'
+        ? {
+            email: 'admin@test.com',
+            password: 'test1234',
+            prefillOnly: false,
+          }
+        : false,
   },
   collections: [Users, Media, Parteneri, Produse, Categorii, ImaginiProduse, Materiale],
   editor: lexicalEditor(),
