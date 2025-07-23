@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+import { Versiuni } from './Versiuni'
 
 export const Produse: CollectionConfig = {
   slug: 'produse',
@@ -14,6 +15,7 @@ export const Produse: CollectionConfig = {
     { name: 'descriere', type: 'textarea', admin: { rows: 4 } },
     { name: 'partener', type: 'relationship', relationTo: 'parteneri' },
     { name: 'categorie', type: 'relationship', relationTo: 'categorii' },
+    { name: 'versiuni', type: 'blocks', blocks: [Versiuni] },
     {
       name: 'promo',
       type: 'checkbox',

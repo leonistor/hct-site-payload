@@ -249,6 +249,15 @@ export interface Produse {
   descriere?: string | null;
   partener?: (number | null) | Parteneri;
   categorie?: (number | null) | Categorii;
+  versiuni?:
+    | {
+        versiune?: string | null;
+        descriere?: string | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'versiuni';
+      }[]
+    | null;
   /**
    * Promovat in liste produse
    */
@@ -590,6 +599,18 @@ export interface ProduseSelect<T extends boolean = true> {
   descriere?: T;
   partener?: T;
   categorie?: T;
+  versiuni?:
+    | T
+    | {
+        versiuni?:
+          | T
+          | {
+              versiune?: T;
+              descriere?: T;
+              id?: T;
+              blockName?: T;
+            };
+      };
   promo?: T;
   materiale?: T;
   imagini?: T;
