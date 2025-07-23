@@ -21,6 +21,7 @@ import Image from 'next/image'
 // Navigation links array to be used in both desktop and mobile menus
 import { navigationLinks } from '@/config/menu'
 import Link from 'next/link'
+import ModeToggle from './theme-switch'
 
 export default function Navbar() {
   return (
@@ -191,9 +192,9 @@ export default function Navbar() {
         </div>
         {/* Right side */}
         <div className="flex items-center gap-2">
-          {/* <Button asChild variant="ghost" size="sm" className="text-sm">
-            <a href="#">Sign In</a>
-          </Button> */}
+          <Button asChild variant="ghost" size="sm" className="text-sm">
+            <ModeToggle />
+          </Button>
           <Button asChild size="sm" className="text-sm">
             <a href="#">Ro</a>
           </Button>
