@@ -264,12 +264,7 @@ export interface Produse {
    */
   promo?: boolean | null;
   materiale?: (number | Materiale)[] | null;
-  imagini?:
-    | {
-        relationTo: 'imgprod';
-        value: number | Imgprod;
-      }[]
-    | null;
+  imagini?: (number | Imgprod)[] | null;
   url_producator?: string | null;
   import_img_name?: string | null;
   import_cod_partener?: string | null;

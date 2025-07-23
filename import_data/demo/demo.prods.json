@@ -1,0 +1,34 @@
+[
+  { "name": "EcoSort Pro - Advanced material sorting system", "img_count": 1, "promo": "false" },
+  {
+    "name": "GreenStream Conveyor - Automated waste transport solution",
+    "img_count": 1,
+    "promo": "false"
+  },
+  { "name": "RecycleMax Baler 05C", "img_count": 3, "promo": "false" },
+  { "name": "CleanCycle Washer", "img_count": 1, "promo": "false" },
+  { "name": "WasteTracker Analytics Recycling", "img_count": 1, "promo": "false" },
+  {
+    "name": "SortSmart AI Machine learning sorting optimization",
+    "img_count": 3,
+    "promo": "false"
+  },
+  { "name": "GreenMetrics Dashboard Sustainability", "img_count": 2, "promo": "false" },
+  { "name": "CircularFlow Manager", "img_count": 2, "promo": "false" },
+  { "name": "PurifyTech Separator Multi-material", "img_count": 3, "promo": "false" },
+  {
+    "name": "EcoShred Industrial - Heavy-duty material shredding equipment",
+    "img_count": 1,
+    "promo": "false"
+  },
+  { "name": "ReGen Pelletizer", "img_count": 1, "promo": "false" },
+  {
+    "name": "CleanStream Extruder - Recycled material processing unit",
+    "img_count": 1,
+    "promo": "false"
+  },
+  { "name": "GreenFleet Tracker", "img_count": 4, "promo": "false" },
+  { "name": "EcoBin Smart 4000", "img_count": 1, "promo": "false" },
+  { "name": "RecycleLink Logistics", "img_count": 2, "promo": "false" },
+  { "name": "ZeroWaste Hub Community recycling center solution", "img_count": 5, "promo": "false" }
+]

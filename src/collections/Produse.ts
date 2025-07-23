@@ -46,7 +46,7 @@ export const Produse: CollectionConfig = {
       hasMany: true,
       admin: { isSortable: true },
     },
-    { name: 'imagini', type: 'relationship', relationTo: ['imgprod'], hasMany: true },
+    { name: 'imagini', type: 'relationship', relationTo: 'imgprod', hasMany: true },
     { name: 'url_producator', type: 'text' },
     {
       type: 'collapsible',

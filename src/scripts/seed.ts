@@ -167,12 +167,7 @@ export const script = async (config: SanitizedConfig) => {
         nume: name,
         descriere: desc,
         partener: partener,
-        imagini: [
-          {
-            relationTo: 'imgprod',
-            value: imageOK ? uploadedImage! : placeholder,
-          },
-        ],
+        imagini: [imageOK ? uploadedImage! : placeholder],
         url_producator: url,
         import_img_name: img,
         import_cod_partener: partner,
