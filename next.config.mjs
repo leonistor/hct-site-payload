@@ -19,6 +19,7 @@ const nextConfig = {
         port: '3000',
         pathname: '/imgprod/**',
       },
+      { protocol: 'https', hostname: 'images.pexels.com' },
     ],
   },
   webpack: (webpackConfig) => {
