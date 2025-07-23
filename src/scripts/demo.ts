@@ -79,13 +79,13 @@ export const script = async (config: SanitizedConfig) => {
 
   // imagini produse
   const demo_imagini_produse: Imgprod[] = []
-  for (let index = 1; index <= IMAGE_COUNT; index++) {
-    const padded_index = index < 10 ? `0${index}` : index.toString()
+  for (let idx = 1; idx <= IMAGE_COUNT; idx++) {
+    const padded_index = idx < 10 ? `0${idx}` : idx.toString()
     const demo_imgprod = await payload.create({
       collection: 'imgprod',
       data: {
         alt: `demo`,
-        filename: `demo-${padded_index}.jpg`,
+        // filename: `demo-${padded_index}.jpg`,
       },
       filePath: `${BASE}demo-${padded_index}.jpg`,
     })
@@ -126,8 +126,11 @@ export const script = async (config: SanitizedConfig) => {
   await Promise.all(result)
   payload.logger.info(`created ${demo_prods.length} produse draft=false`)
 
+  const images_left = demo_imagini_produse.length
+  payload.logger.info(`images left: ${images_left}`)
+
   // unpublished
-  for (let index = 0; index < 10; index++) {
+  for (let idx = 0; idx < 10; idx++) {
     await payload
       .create({
         collection: 'produse',
@@ -138,7 +141,7 @@ export const script = async (config: SanitizedConfig) => {
           descriere: randProductDescription(),
           partener: demo_partener,
           categorie: demo_categorie,
-          imagini: [demo_imagini_produse[32 + index]],
+          imagini: [demo_imagini_produse[idx]],
           import_cod_partener: 'demo',
         },
       })
