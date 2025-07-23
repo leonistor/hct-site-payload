@@ -17,7 +17,7 @@ export const script = async (config: SanitizedConfig) => {
   await payload.delete({
     collection: 'produse',
     where: {
-      alt: { equals: 'demo' },
+      import_cod_partener: { equals: 'demo' },
     },
   })
 

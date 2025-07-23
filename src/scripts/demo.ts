@@ -14,8 +14,7 @@ import { Imgprod } from '@/payload-types'
 export const script = async (config: SanitizedConfig) => {
   await payload.init({ config })
 
-  payload.logger.info('oferta si demo')
-
+  /*
   payload.logger.info(`oferta=true pentru random ${SIZE} products`)
   const all_ids = (
     await payload.find({
@@ -37,7 +36,7 @@ export const script = async (config: SanitizedConfig) => {
     },
   })
   console.log('errors: ', result_oferta.errors)
-
+*/
   payload.logger.info('demo content')
   const demo_categorie = await payload.create({
     collection: 'categorii',
@@ -103,6 +102,7 @@ export const script = async (config: SanitizedConfig) => {
           categorie: demo_categorie,
           materiale: sample_materiale,
           imagini: imagini_prod,
+          import_cod_partener: 'demo',
         },
       })
       .catch((error) => {
