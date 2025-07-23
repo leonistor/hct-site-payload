@@ -251,11 +251,9 @@ export interface Produse {
   categorie?: (number | null) | Categorii;
   versiuni?:
     | {
-        versiune?: string | null;
+        cod?: string | null;
         descriere?: string | null;
         id?: string | null;
-        blockName?: string | null;
-        blockType: 'versiuni';
       }[]
     | null;
   /**
@@ -602,14 +600,9 @@ export interface ProduseSelect<T extends boolean = true> {
   versiuni?:
     | T
     | {
-        versiuni?:
-          | T
-          | {
-              versiune?: T;
-              descriere?: T;
-              id?: T;
-              blockName?: T;
-            };
+        cod?: T;
+        descriere?: T;
+        id?: T;
       };
   promo?: T;
   materiale?: T;

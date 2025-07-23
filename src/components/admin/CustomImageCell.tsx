@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { type DefaultServerCellComponentProps } from 'payload'
 
 export const MyComponent = async ({ cellData, payload }: DefaultServerCellComponentProps) => {
+  // TODO: not found case
   const media = await payload.findByID({
     collection: 'media',
     id: cellData,
