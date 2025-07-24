@@ -11,3 +11,7 @@ node .next/standalone/server.js
 ```
 
 [!] does mot work with bun
+
+## util
+
+- https://payload-releases-filter.vercel.app/
