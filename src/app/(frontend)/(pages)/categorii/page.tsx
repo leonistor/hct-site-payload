@@ -6,7 +6,9 @@ import DemoLista from '../../components/DemoLista'
 export default function Categorii() {
   return (
     <div>
-      <p className="text-3xl font-semibold">Categorii</p>
+      <div className="prose dark:prose-invert lg:prose-xl">
+        <h1>Categorii</h1>
+      </div>
       <Separator className="m-2" />
       <DemoLista />
     </div>
