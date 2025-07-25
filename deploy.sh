@@ -3,10 +3,10 @@
 PROJECT="hct"
 TIMESTAMP=$(date +"%Y-%m-%d_%H-%M")
 
-if [ "$(uname)" != "Darwin" ]; then
-    echo "Does not work on Linux! Must change 'cp -r' to 'cp -R'! Aborting"
-    exit 1
-fi
+# if [ "$(uname)" != "Darwin" ]; then
+#     echo "Does not work on Linux! Must change 'cp -r' to 'cp -R'! Aborting"
+#     exit 1
+# fi
 
 # copy files and sqlite db
 cp -r public .next/standalone/
