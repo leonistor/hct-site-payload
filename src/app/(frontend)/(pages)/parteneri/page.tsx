@@ -13,7 +13,7 @@ export default async function Parteneri() {
     pagination: false,
     depth: 2,
   })
-  console.log(parteneri)
+  // console.log(parteneri)
   return (
     <div>
       <Heading1 text="Parteneri" />
