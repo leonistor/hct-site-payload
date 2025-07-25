@@ -1,0 +1,41 @@
+TODO
+
+cu SEBA
+
+- ok versiuni prod
+- logo?
+- primary color
+- texte
+  - despre noi
+  - en/de/it
+
+LEO
+
+- array versiuni prod
+- icons picker
+- pagini prezentabile in menu
+- lista si carousel in menu
+- some blocks
+  - hero
+  - features
+  - ?
+- mdx?
+- deploy script
+- test deploy with docker (https://payloadcms.com/docs/production/deployment#docker)
+- deploy to hct.vitrina.promo
+- cron backup database
+
+TODOs 24.07
+
+ca la bronneberg: cursor mouse pe carousel, CTA buttons, main nav
+coolors: make pallete, primary = sapphire (https://palettemaker.com/colors/sapphire)
+
+BUG select materiale -> unique
+https://palettemaker.com/colors/sapphire
+nav: mai lat, similar bronneberg
+video player (demo)
+testimonials --> de pe site (h-ct) (Referinte)
+videos -> descarca din src de la https://h-ct.ro/galerie-video.php
+prima si ultimele doua
+promo (random 6 din 20 marcate promo)
+despre noi/echipa: ca la rematbv.ro
