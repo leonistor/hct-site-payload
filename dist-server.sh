@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ $# -eq 0 ]; then
-    echo "ERROR: missing argument: tar.gz content archive located in './build'"
+    echo "ERROR: missing argument: tar.gz content archive"
     exit 1
 fi
 
@@ -9,7 +9,11 @@ BASE="./build/standalone/"
 
 echo "extracting archive"
 mkdir -p build
-tar -C ./build -czf "$1"
+tar -C ./build -xzf "$1"
+if [ ! -d "$BASE" ]; then
+    echo "errors extracting archive. exiting."
+    exit 1
+fi
 
 echo "copying content files"
 cp "$BASE".env .
