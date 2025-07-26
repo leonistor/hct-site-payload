@@ -11,6 +11,7 @@ cu SEBA
 
 LEO
 
+- Join relationthip pe Imgprod -> Parteneri/Produse
 - use changie: https://changie.dev/
 - version in footer
 - bun with pm2: https://bun.sh/guides/ecosystem/pm2
