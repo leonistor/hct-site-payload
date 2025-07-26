@@ -13,6 +13,7 @@ LEO
 
 - use changie: https://changie.dev/
 - version in footer
+- bun with pm2: https://bun.sh/guides/ecosystem/pm2
 - array versiuni prod
 - icons picker
 - pagini prezentabile in menu
