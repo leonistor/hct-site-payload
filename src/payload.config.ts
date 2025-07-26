@@ -37,8 +37,8 @@ export default buildConfig({
   collections: [Users, Media, Parteneri, Produse, Categorii, ImaginiProduse, Materiale],
   editor: lexicalEditor(),
   // cors: '*',
-  csrf: ['http://localhost:3000'],
-  cors: ['http://localhost:3000'],
+  csrf: ['http://localhost:3000', 'http://pop-os.lan:3000', 'http://coca.lan:3000'],
+  cors: ['http://localhost:3000', 'http://pop-os.lan:3000', 'http://coca.lan:3000'],
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
