@@ -5,20 +5,16 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
-BASE="./build/standalone/"
+BASE="./build/"
 
 echo "extracting archive"
 mkdir -p build
-tar -C ./build -xzf "$1"
-if [ ! -d "$BASE" ]; then
-    echo "errors extracting archive. exiting."
-    exit 1
-fi
+tar -C ./build -xzf "$1" || exit 1
 
 echo "copying content files"
-cp "$BASE".env .
-cp -r "$BASE"public .
-cp -r "$BASE"db .
+cp "$BASE".env . || exit 1
+cp -r "$BASE"public . || exit 1
+cp -r "$BASE"db . || exit 1
 
 echo "running build"
 bun install
