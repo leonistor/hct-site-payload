@@ -11,6 +11,8 @@ cu SEBA
 
 LEO
 
+- use changie: https://changie.dev/
+- version in footer
 - array versiuni prod
 - icons picker
 - pagini prezentabile in menu
