@@ -39,7 +39,7 @@ const columns: ColumnDef<Item>[] = [
 export default function DemoLista() {
   const stringifiedQuery = stringify({ where: query }, { addQueryPrefix: true })
   const { data, error, isLoading } = useSWR<PaginatedDocs<Produse>>(
-    `http://localhost:3000/api/produse${stringifiedQuery}`,
+    `/api/produse${stringifiedQuery}`,
     fetcher,
   )
   if (isLoading) return <div>Loading...</div>
