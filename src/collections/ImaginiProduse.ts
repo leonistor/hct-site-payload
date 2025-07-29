@@ -13,6 +13,7 @@ export const ImaginiProduse: CollectionConfig = {
     { name: 'alt', type: 'text', required: false },
     { name: 'partener', type: 'relationship', relationTo: 'parteneri', required: false },
   ],
+  enableQueryPresets: true,
   upload: {
     staticDir: 'public/imgprod',
     mimeTypes: ['image/*'],

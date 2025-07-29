@@ -12,6 +12,7 @@ export const Media: CollectionConfig = {
       required: true,
     },
   ],
+  enableQueryPresets: true,
   upload: {
     staticDir: 'public/media',
     adminThumbnail: 'thumbnail',

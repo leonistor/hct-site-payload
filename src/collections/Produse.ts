@@ -82,6 +82,7 @@ export const Produse: CollectionConfig = {
       ],
     },
   ],
+  enableQueryPresets: true,
   admin: {
     useAsTitle: 'nume',
     defaultColumns: ['nume', 'categorie', 'partener', 'promo', '_status'],
