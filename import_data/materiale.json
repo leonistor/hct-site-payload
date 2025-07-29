@@ -1,40 +1,86 @@
 [
-  { "denumire_en": "Metal recycling", "denumire": "Reciclarea metalelor", "icon": "weight" },
+  {
+    "denumire_en": "Metal recycling",
+    "denumire": "Metale",
+    "icon": "weight",
+    "descriere": "Reciclarea metalelor"
+  },
   {
     "denumire_en": "Aluminium Recycling",
-    "denumire": "Reciclarea aluminiului",
-    "icon": "spray-can"
+    "denumire": "Aluminiu",
+    "icon": "spray-can",
+    "descriere": "Reciclarea aluminiului"
   },
-  { "denumire_en": "Cable Recycling", "denumire": "Reciclarea cablurilor", "icon": "cable" },
+  {
+    "denumire_en": "Cable Recycling",
+    "denumire": "Cabluri",
+    "icon": "cable",
+    "descriere": "Reciclarea cablurilor"
+  },
   {
     "denumire_en": "End-of-life Vehicles Recycling",
-    "denumire": "Reciclarea vehiculelor scoase din uz",
-    "icon": "car-front"
+    "denumire": "Vehicule",
+    "icon": "car-front",
+    "descriere": "Reciclarea vehiculelor scoase din uz"
   },
-  { "denumire_en": "Car engines", "denumire": "Motoare auto", "icon": "tractor" },
+  {
+    "denumire_en": "Car engines",
+    "denumire": "Motoare auto",
+    "icon": "tractor",
+    "descriere": "Motoare auto"
+  },
   {
     "denumire_en": "WEEE Recycling",
-    "denumire": "Reciclarea DEEE (Deșeuri de Echipamente Electrice și Electronice)",
-    "icon": "tablet-smartphone"
+    "denumire": "DEEE",
+    "icon": "tablet-smartphone",
+    "descriere": "Reciclarea DEEE (Deșeuri de Echipamente Electrice și Electronice)"
   },
   {
     "denumire_en": "Electric motor recycling",
-    "denumire": "Reciclarea motoarelor electrice",
-    "icon": "orbit"
+    "denumire": "Motoare electrice",
+    "icon": "orbit",
+    "descriere": "Reciclarea motoarelor electrice"
   },
   {
     "denumire_en": "Paper mill pulper",
-    "denumire": "Recuperarea deșeurilor de hidrapulper de la fabricile de hârtie",
-    "icon": "scroll-text"
+    "denumire": "Hidrapulper ",
+    "icon": "scroll-text",
+    "descriere": "Recuperarea deșeurilor de hidrapulper de la fabricile de hârtie"
   },
   {
     "denumire_en": "Refrigerator Recycling",
-    "denumire": "Reciclarea frigiderelor",
-    "icon": "refrigerator"
+    "denumire": "Frigidere",
+    "icon": "refrigerator",
+    "descriere": "Reciclarea frigiderelor"
   },
-  { "denumire_en": "Solid Urban Waste", "denumire": "Deșeuri solide urbane", "icon": "trash" },
-  { "denumire_en": "Tins", "denumire": "Conserve metalice / Cutii de conserve", "icon": "bandage" },
-  { "denumire_en": "Mixed metals", "denumire": "Metale mixte", "icon": "tablets" },
-  { "denumire_en": "Slag processing", "denumire": "Prelucrarea zgurii", "icon": "brick-wall-fire" },
-  { "denumire_en": "Refining", "denumire": "Rafinare", "icon": "flask-conical" }
+  {
+    "denumire_en": "Solid Urban Waste",
+    "denumire": "Deșeuri urbane",
+    "icon": "trash",
+    "descriere": "Deșeuri solide urbane"
+  },
+  {
+    "denumire_en": "Tins",
+    "denumire": "Conserve",
+    "icon": "bandage",
+    "descriere": "Conserve metalice / Cutii de conserve"
+  },
+  {
+    "denumire_en": "Mixed metals",
+    "denumire": "Mixte",
+    "icon": "tablets",
+    "descriere": "Metale mixte"
+  },
+  {
+    "denumire_en": "Slag processing",
+    "denumire": "Zgură",
+    "icon": "brick-wall-fire",
+    "descriere": "Prelucrarea zgurii"
+  },
+  {
+    "denumire_en": "Refining",
+    "denumire": "Rafinare",
+    "icon": "flask-conical",
+    "descriere": "Rafinare"
+  }
 ]
