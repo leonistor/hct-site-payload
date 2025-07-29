@@ -249,9 +249,18 @@ export interface Parteneri {
 export interface Produse {
   id: number;
   nume: string;
-  descriere?: string | null;
   partener?: (number | null) | Parteneri;
   categorie?: (number | null) | Categorii;
+  /**
+   * Promovat in liste produse
+   */
+  promo?: boolean | null;
+  materiale?: (number | Materiale)[] | null;
+  /**
+   * URL produs in site producator
+   */
+  url_producator?: string | null;
+  descriere?: string | null;
   /**
    * Variante de produs
    */
@@ -262,13 +271,7 @@ export interface Produse {
         id?: string | null;
       }[]
     | null;
-  /**
-   * Promovat in liste produse
-   */
-  promo?: boolean | null;
-  materiale?: (number | Materiale)[] | null;
   imagini?: (number | Imgprod)[] | null;
-  url_producator?: string | null;
   import_img_name?: string | null;
   import_cod_partener?: string | null;
   import_categorie?: string | null;
@@ -646,9 +649,12 @@ export interface ParteneriSelect<T extends boolean = true> {
  */
 export interface ProduseSelect<T extends boolean = true> {
   nume?: T;
-  descriere?: T;
   partener?: T;
   categorie?: T;
+  promo?: T;
+  materiale?: T;
+  url_producator?: T;
+  descriere?: T;
   variante?:
     | T
     | {
@@ -656,10 +662,7 @@ export interface ProduseSelect<T extends boolean = true> {
         descriere?: T;
         id?: T;
       };
-  promo?: T;
-  materiale?: T;
   imagini?: T;
-  url_producator?: T;
   import_img_name?: T;
   import_cod_partener?: T;
   import_categorie?: T;

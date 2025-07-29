@@ -25,19 +25,48 @@ export const Produse: CollectionConfig = {
   },
   fields: [
     { name: 'nume', type: 'text', required: true },
+    {
+      type: 'row',
+      fields: [
+        {
+          name: 'partener',
+          type: 'relationship',
+          relationTo: 'parteneri',
+          admin: { allowCreate: false, allowEdit: false },
+        },
+        {
+          name: 'categorie',
+          type: 'relationship',
+          relationTo: 'categorii',
+          admin: { allowCreate: false, allowEdit: false },
+        },
+      ],
+    },
+    {
+      type: 'row',
+      fields: [
+        {
+          name: 'promo',
+          type: 'checkbox',
+          defaultValue: false,
+          admin: { description: 'Promovat in liste produse', width: '15%' },
+        },
+        {
+          name: 'materiale',
+          type: 'relationship',
+          relationTo: 'materiale',
+          hasMany: true,
+          admin: { isSortable: true, allowCreate: false, allowEdit: false, width: '50%' },
+        },
+        {
+          name: 'url_producator',
+          type: 'text',
+          label: 'URL',
+          admin: { width: '35%', description: 'URL produs in site producator' },
+        },
+      ],
+    },
     { name: 'descriere', type: 'textarea', admin: { rows: 4 } },
-    {
-      name: 'partener',
-      type: 'relationship',
-      relationTo: 'parteneri',
-      admin: { allowCreate: false, allowEdit: false },
-    },
-    {
-      name: 'categorie',
-      type: 'relationship',
-      relationTo: 'categorii',
-      admin: { allowCreate: false, allowEdit: false },
-    },
     {
       name: 'variante',
       type: 'array',
@@ -57,24 +86,11 @@ export const Produse: CollectionConfig = {
         disableBulkEdit: true,
       },
     },
-    {
-      name: 'promo',
-      type: 'checkbox',
-      defaultValue: false,
-      admin: { description: 'Promovat in liste produse' },
-    },
-    {
-      name: 'materiale',
-      type: 'relationship',
-      relationTo: 'materiale',
-      hasMany: true,
-      admin: { isSortable: true, allowCreate: false, allowEdit: false },
-    },
     { name: 'imagini', type: 'relationship', relationTo: 'imgprod', hasMany: true },
-    { name: 'url_producator', type: 'text' },
     {
       type: 'collapsible',
       label: 'Import data',
+      admin: { initCollapsed: true },
       fields: [
         { name: 'import_img_name', type: 'text' },
         { name: 'import_cod_partener', type: 'text' },
