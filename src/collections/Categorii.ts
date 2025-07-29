@@ -34,5 +34,5 @@ export const Categorii: CollectionConfig = {
       admin: { description: 'parteneri cu produse in categorie' },
     },
   ],
-  admin: { useAsTitle: 'denumire', defaultColumns: ['icon', 'denumire'] },
+  admin: { useAsTitle: 'denumire', defaultColumns: ['denumire', 'icon'] },
 }

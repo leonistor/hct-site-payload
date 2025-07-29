@@ -48,12 +48,15 @@ export const script = async (config: SanitizedConfig) => {
   const imp_categorii = JSON.parse(await readFile('categorii.json')) as {
     denumire: string
     icon: string
+    _order: string
     import_parteneri: string
   }[]
   const imp_materiale = JSON.parse(await readFile('materiale.json')) as {
     denumire: string
     denumire_en: string
+    descriere: string
     icon: string
+    _order: string
   }[]
 
   // categorii
@@ -63,6 +66,7 @@ export const script = async (config: SanitizedConfig) => {
       data: {
         denumire: c.denumire,
         icon: c.icon,
+        _order: c._order,
         import_parteneri: c.import_parteneri,
       },
     })
@@ -77,6 +81,8 @@ export const script = async (config: SanitizedConfig) => {
       data: {
         denumire: c.denumire,
         denumire_en: c.denumire_en,
+        descriere: c.descriere,
+        _order: c._order,
         icon: c.icon,
       },
     })

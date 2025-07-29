@@ -9,6 +9,7 @@ const IMAGE_COUNT = 42
 // const OFERTA_SIZE = 6
 
 import demo_prods from 'import_data/demo/demo.prods.json'
+import imp_categorii from 'import_data/categorii.json'
 import imp_materiale from 'import_data/materiale.json'
 import { Imgprod } from '@/payload-types'
 
@@ -37,11 +38,25 @@ export const script = async (config: SanitizedConfig) => {
     data: {
       denumire: 'Demo categorie',
       icon: 'star',
+      _order: '100',
       descriere:
         'Categorie demo cu produse inventate de Claude.ai si imagini gratuite de pe unsplash.com',
     },
   })
   payload.logger.info(`created categorie ${demo_categorie.id}`)
+  const result_categ = imp_categorii.map(async (c) => {
+    await payload.create({
+      collection: 'categorii',
+      data: {
+        denumire: c.denumire,
+        icon: c.icon,
+        _order: c._order,
+        import_parteneri: c.import_parteneri,
+      },
+    })
+  })
+  await Promise.all(result_categ)
+  payload.logger.info('done: Categorii')
 
   // materiale
   const demo_materiale = imp_materiale.map(async (c) => {
@@ -50,6 +65,8 @@ export const script = async (config: SanitizedConfig) => {
       data: {
         denumire: c.denumire,
         denumire_en: c.denumire_en,
+        descriere: c.descriere,
+        _order: c._order,
         icon: c.icon,
       },
     })

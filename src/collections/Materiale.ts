@@ -16,5 +16,5 @@ export const Materiale: CollectionConfig = {
     { name: 'icon', type: 'text' },
     { name: 'descriere', type: 'textarea' },
   ],
-  admin: { useAsTitle: 'denumire' },
+  admin: { useAsTitle: 'denumire', pagination: { defaultLimit: 30 } },
 }
