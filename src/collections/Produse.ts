@@ -26,23 +26,33 @@ export const Produse: CollectionConfig = {
   fields: [
     { name: 'nume', type: 'text', required: true },
     { name: 'descriere', type: 'textarea', admin: { rows: 4 } },
-    { name: 'partener', type: 'relationship', relationTo: 'parteneri' },
-    { name: 'categorie', type: 'relationship', relationTo: 'categorii' },
     {
-      name: 'versiuni',
+      name: 'partener',
+      type: 'relationship',
+      relationTo: 'parteneri',
+      admin: { allowCreate: false, allowEdit: false },
+    },
+    {
+      name: 'categorie',
+      type: 'relationship',
+      relationTo: 'categorii',
+      admin: { allowCreate: false, allowEdit: false },
+    },
+    {
+      name: 'variante',
       type: 'array',
       labels: {
-        singular: 'Versiune',
-        plural: 'Versiuni',
+        singular: 'Varianta',
+        plural: 'Variante',
       },
-
       fields: [
         { name: 'cod', type: 'text' },
         { name: 'descriere', type: 'text' },
       ],
       admin: {
-        description: 'Versiuni de produs',
-        initCollapsed: true,
+        description: 'Variante de produs',
+        isSortable: true,
+        initCollapsed: false,
         disableListFilter: true,
         disableBulkEdit: true,
       },
@@ -58,7 +68,7 @@ export const Produse: CollectionConfig = {
       type: 'relationship',
       relationTo: 'materiale',
       hasMany: true,
-      admin: { isSortable: true },
+      admin: { isSortable: true, allowCreate: false, allowEdit: false },
     },
     { name: 'imagini', type: 'relationship', relationTo: 'imgprod', hasMany: true },
     { name: 'url_producator', type: 'text' },

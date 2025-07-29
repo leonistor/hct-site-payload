@@ -251,9 +251,9 @@ export interface Produse {
   partener?: (number | null) | Parteneri;
   categorie?: (number | null) | Categorii;
   /**
-   * Versiuni de produs
+   * Variante de produs
    */
-  versiuni?:
+  variante?:
     | {
         cod?: string | null;
         descriere?: string | null;
@@ -599,7 +599,7 @@ export interface ProduseSelect<T extends boolean = true> {
   descriere?: T;
   partener?: T;
   categorie?: T;
-  versiuni?:
+  variante?:
     | T
     | {
         cod?: T;
