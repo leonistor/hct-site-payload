@@ -72,5 +72,8 @@ export const Produse: CollectionConfig = {
       ],
     },
   ],
-  admin: { useAsTitle: 'nume' },
+  admin: {
+    useAsTitle: 'nume',
+    defaultColumns: ['nume', 'categorie', 'partener', 'promo', '_status'],
+  },
 }

@@ -11,12 +11,14 @@ cu SEBA
 
 LEO
 
+- materiale: 1/2 words, rest descriere; admin icon show
+- customize admin: group collections, logo, link to site
 - Join relationthip pe Imgprod -> Parteneri/Produse
 - use changie: https://changie.dev/
 - version in footer
 - bun with pm2: https://bun.sh/guides/ecosystem/pm2
 - array versiuni prod
-- icons picker
+- icons picker materiale si categorii
 - pagini prezentabile in menu
 - lista si carousel in menu
 - some blocks
