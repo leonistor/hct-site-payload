@@ -28,6 +28,8 @@ LEO
 - test deploy with docker (https://payloadcms.com/docs/production/deployment#docker)
 - deploy to hct.vitrina.promo
 - cron backup database
+- https://nextjs.org/docs/app/guides/package-bundling
+
 
 TODOs 24.07
 

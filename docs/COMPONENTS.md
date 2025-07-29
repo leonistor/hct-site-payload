@@ -24,6 +24,13 @@ swr
 tailwindcss-animate
 ```
 
+## content
+
+https://animate-ui.com/docs/ui-elements/management-bar
+https://originui.com/table
+https://shadcnstudio.com/docs/components/card
+https://www.prismui.tech/docs/components/expandable-card
+
 ## components to use
 
 navbar (yay!)

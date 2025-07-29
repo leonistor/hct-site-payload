@@ -238,6 +238,7 @@ export interface Parteneri {
   url?: string | null;
   updatedAt: string;
   createdAt: string;
+  _status?: ('draft' | 'published') | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -289,6 +290,7 @@ export interface Categorii {
   import_parteneri?: string | null;
   updatedAt: string;
   createdAt: string;
+  _status?: ('draft' | 'published') | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -586,6 +588,7 @@ export interface ParteneriSelect<T extends boolean = true> {
   url?: T;
   updatedAt?: T;
   createdAt?: T;
+  _status?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -626,6 +629,7 @@ export interface CategoriiSelect<T extends boolean = true> {
   import_parteneri?: T;
   updatedAt?: T;
   createdAt?: T;
+  _status?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
