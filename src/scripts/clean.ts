@@ -8,6 +8,7 @@ async function deleteCollection(collection: CollectionSlug) {
   const confirmContinue = await confirm(`${collection} has ${count} documents. Continue?`, {
     initial: true,
   })
+  payload.logger.info(`created user $admin_user.id}`)
   if (confirmContinue) {
     await payload.delete({ collection, where: {} })
   }

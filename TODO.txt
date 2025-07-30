@@ -11,6 +11,8 @@ cu SEBA
 
 LEO
 
+@payloadcms/plugin-import-export at 38 !!!
+
 - descriere_md (code!) in tab cu descriere
 - add image to varianta?
 - custom block name for Variante
