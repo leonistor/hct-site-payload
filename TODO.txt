@@ -11,6 +11,7 @@ cu SEBA
 
 LEO
 
+- descriere_md (code!) in tab cu descriere
 - materiale: 1/2 words, rest descriere; admin icon show
 - customize admin: group collections, logo, link to site
 - Join relationthip pe Imgprod -> Parteneri/Produse

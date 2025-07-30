@@ -32,9 +32,9 @@ export const Parteneri: CollectionConfig = {
       type: 'relationship',
       relationTo: 'media',
       admin: {
-        // components: {
-        //   Cell: 'src/components/admin/CustomImageCell#MyComponent',
-        // },
+        components: {
+          Cell: 'src/components/admin/CustomImageCell#MyComponent',
+        },
       },
     },
     { name: 'descriere', type: 'textarea' },
