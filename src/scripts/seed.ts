@@ -114,11 +114,10 @@ export const script = async (config: SanitizedConfig) => {
   // --- produse
   ok = await confirm(`Create produse from 'import_data/prods_leo.json'?`)
   if (ok) {
-    const created_imgprods: Imgprod[] = []
-
     result = imp_produse.map(async (p) => {
       // produs
       const { partner, name, url, name_ro, name_en, content_ro, content_en, imgs } = p
+      const created_imgprods: Imgprod[] = []
 
       // upload images
       const imgprods_result = imgs.map(async (img) => {
