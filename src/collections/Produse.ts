@@ -27,6 +27,12 @@ export const Produse: CollectionConfig = {
   fields: [
     { name: 'nume', type: 'text', required: true },
     {
+      name: 'nume_en',
+      type: 'text',
+      required: true,
+      admin: { description: 'nume original in engleza' },
+    },
+    {
       type: 'row',
       fields: [
         {
@@ -138,9 +144,11 @@ export const Produse: CollectionConfig = {
       label: 'Import data',
       admin: { initCollapsed: true },
       fields: [
-        { name: 'import_img_name', type: 'text' },
-        { name: 'import_cod_partener', type: 'text' },
-        { name: 'import_categorie', type: 'text' },
+        {
+          name: 'descriere_en',
+          type: 'text',
+          admin: { description: 'descrierea originala in engleza de pe site producator' },
+        },
       ],
     },
   ],

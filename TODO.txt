@@ -11,8 +11,7 @@ cu SEBA
 
 LEO
 
-@payloadcms/plugin-import-export at 38 !!!
-
+- multiple imgprod -> mark main image on prod / new field mainimage
 - descriere_md (code!) in tab cu descriere
 - add image to varianta?
 - custom block name for Variante

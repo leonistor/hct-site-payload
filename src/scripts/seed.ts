@@ -4,13 +4,14 @@
 
 import { existsSync } from 'fs'
 import { confirm } from '@topcli/prompts'
-import type { Parteneri } from '@/payload-types'
+import type { Imgprod, Parteneri } from '@/payload-types'
 import type { SanitizedConfig } from 'payload'
 import payload from 'payload'
 
 import imp_parteneri from 'import_data/partners.json'
 import imp_categorii from 'import_data/categorii.json'
 import imp_materiale from 'import_data/materiale.json'
+import imp_produse from 'import_data/prods_leo.json'
 
 const BASE = 'import_data/'
 const PLACEHOLDER = `${BASE}image_placeholder.png`
@@ -77,7 +78,7 @@ export const script = async (config: SanitizedConfig) => {
   }
 
   // parteneri
-  ok = await confirm('Create Materiale?')
+  ok = await confirm('Create parteneri?')
   if (ok) {
     result = imp_parteneri.map(async (p) => {
       const { id, name, url } = p
@@ -108,6 +109,55 @@ export const script = async (config: SanitizedConfig) => {
     })
     await Promise.all(result)
     payload.logger.info('done: Parteneri')
+  }
+
+  // --- produse
+  ok = await confirm(`Create produse from 'import_data/prods_leo.json'?`)
+  if (ok) {
+    const created_imgprods: Imgprod[] = []
+
+    result = imp_produse.map(async (p) => {
+      // produs
+      const { partner, name, url, name_ro, name_en, content_ro, content_en, imgs } = p
+
+      // upload images
+      const imgprods_result = imgs.map(async (img) => {
+        const imageFilePath = `${BASE}${img}`
+        const uploadedImage = await payload.create({
+          collection: 'imgprod',
+          data: {
+            alt: `${partner} ${name}`,
+          },
+          filePath: imageFilePath,
+        })
+        created_imgprods.push(uploadedImage)
+      })
+      await Promise.all(imgprods_result)
+
+      // get partener from code
+      const partener = created_partneri.get(partner)
+
+      // const { partner, name, url, name_ro, name_en, content_ro, content_en, imgs } = p
+      // create produs
+      const created_produs = await payload.create({
+        collection: 'produse',
+        draft: true,
+        data: {
+          nume: name_ro,
+          nume_en: name_en,
+          descriere: content_ro,
+          descriere_md: content_ro,
+          _status: 'draft',
+          partener: partener,
+          imagini: created_imgprods,
+          url_producator: url,
+          descriere_en: content_en,
+        },
+      })
+      payload.logger.info(`created produs: ${created_produs.id}`)
+    })
+    await Promise.all(result)
+    payload.logger.info('done: Produse')
   }
 
   payload.logger.info('Successfully seeded!')
