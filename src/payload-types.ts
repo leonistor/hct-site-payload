@@ -269,6 +269,7 @@ export interface Produse {
     | {
         cod?: string | null;
         descriere?: string | null;
+        imagine?: (number | null) | Imgprod;
         id?: string | null;
       }[]
     | null;
@@ -662,6 +663,7 @@ export interface ProduseSelect<T extends boolean = true> {
     | {
         cod?: T;
         descriere?: T;
+        imagine?: T;
         id?: T;
       };
   imagini?: T;

@@ -102,6 +102,12 @@ export const Produse: CollectionConfig = {
       fields: [
         { name: 'cod', type: 'text' },
         { name: 'descriere', type: 'text' },
+        {
+          name: 'imagine',
+          type: 'relationship',
+          relationTo: 'imgprod',
+          admin: { appearance: 'drawer' },
+        },
       ],
       admin: {
         description: 'Variante de produs',
