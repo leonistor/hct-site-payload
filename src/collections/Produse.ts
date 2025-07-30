@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+// import { VarianteRowLabel } from '../components/admin/VarianteRowLabel'
 
 export const Produse: CollectionConfig = {
   slug: 'produse',
@@ -108,6 +109,10 @@ export const Produse: CollectionConfig = {
         initCollapsed: false,
         disableListFilter: true,
         disableBulkEdit: true,
+        components: {
+          // TODO: custom row label w/ cod
+          // RowLabel: VarianteRowLabel,
+        },
       },
     },
     {
