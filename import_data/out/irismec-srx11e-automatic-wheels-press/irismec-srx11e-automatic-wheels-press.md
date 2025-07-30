@@ -1,0 +1,25 @@
+---
+url: https://www.iris-mec.com/product-detail/srx11e-automatic-wheels-press/
+---
+
+# SRX11E | Automatic wheels press
+
+
+
+- [](https://www.iris-mec.com/wp-content/uploads/2015/10/SR8E.jpg "Enlarge Image")![](https://www.iris-mec.com/wp-content/uploads/2015/10/SR8E.jpg)
+    
+- [](https://www.iris-mec.com/wp-content/uploads/2015/10/SR_02.jpg "Enlarge Image")![](https://www.iris-mec.com/wp-content/uploads/2015/10/SR_02-480x324.jpg)
+    
+- [](https://www.iris-mec.com/wp-content/uploads/2015/10/SR_01.jpg "Enlarge Image")![](https://www.iris-mec.com/wp-content/uploads/2015/10/SR_01-480x324.jpg)
+    
+
+
+
+- ![](https://www.iris-mec.com/wp-content/uploads/2015/10/SR8E-80x80.jpg)
+- ![](https://www.iris-mec.com/wp-content/uploads/2015/10/SR_02-80x80.jpg)
+- ![](https://www.iris-mec.com/wp-content/uploads/2015/10/SR_01-80x80.jpg)
+
+Automatic equipment for the separation of the tire - rim with a N ° 120 work-hour cycles. Minimum and maximum diameter of the tires to be treated 12”-22“
+
+
+This machine is designed to separate the tire from the rim in an easy and safe way. The wheelspress reduces the volume of the iron and press it ready for furnaces. The wheelspress can crush from 80 to 140 wheels per hour, that means approximately 7054/12125 lb of iron per day. For this reason this machine gives a quick Return of Investment (ROI).

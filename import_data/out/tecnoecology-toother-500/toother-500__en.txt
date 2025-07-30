@@ -1,0 +1,13 @@
+TOOTHER 500
+
+DESCRIPTION
+
+------------------------------------------------------------------------
+
+The crusher is equipped with mobile teeth driven by hydraulic pistons
+that rotate respect to the fi xed teeth and in this way it crushes the
+scrap to be treated.
+
+A hydraulic power system, through the pusher with 340 mm stroke allows
+it to adapt easily to the various types of material to be treated.
+

@@ -1,0 +1,25 @@
+---
+url: https://www.panizzolo.com/en/recycling-solutions/recycling-machines/sorting-systems/sieves/
+---
+
+# Sieves
+
+## Dynamic Shake
+
+The materials resulting from fine grinding of Flex Mega, Mobile and Stationary Refine series hammer mills are treated with vibrating, rotating screens. The metal separators of the Dynamic Shake series, in particular, are plants designed to separate metal granules from inert powders.
+
+Optimal separation of the non-magnetic material from the magnetic one is obtained thanks to the combined use of a special step-shaped surface and the particular separation belt structure. This accessory, like other Panizzolo Recycling integrated systems, has been designed to maximise the recovery of secondary raw materials and minimise final waste.
+
+![](https://www.panizzolo.com/wp-content/uploads/2021/10/Vagli-5-uai-1124x843.jpg)
+
+## Comb vibrating table
+
+Complete with interchangeable combs and module with magnetic drum. Mainly used in the electric motors processing cycle, it performs a primary sorting by size.
+
+![](https://www.panizzolo.com/wp-content/uploads/2021/10/Vagli-1-uai-1333x1000.jpg)
+
+## Rotary Sieve
+
+Available in different sizes and models according to the processing cycle it is inserted in. It has an interchangeable calendered perforated mesh inside. The combination between rotary and tilting movement separates the material into two sizes: undersieve and oversieve. Supplied to complete the Panizzolo processing cycles, they are available in different models and sizes.
+
+![](https://www.panizzolo.com/wp-content/uploads/2021/10/Vagli-4-uai-1333x1000.jpg)
