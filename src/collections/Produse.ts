@@ -100,13 +100,18 @@ export const Produse: CollectionConfig = {
         plural: 'Variante',
       },
       fields: [
-        { name: 'cod', type: 'text' },
-        { name: 'descriere', type: 'text' },
         {
-          name: 'imagine',
-          type: 'relationship',
-          relationTo: 'imgprod',
-          admin: { appearance: 'drawer' },
+          type: 'row',
+          fields: [
+            { name: 'cod', type: 'text', admin: { width: '15%' } },
+            { name: 'descriere', type: 'text' },
+            {
+              name: 'imagine',
+              type: 'relationship',
+              relationTo: 'imgprod',
+              admin: { appearance: 'drawer', width: '30%' },
+            },
+          ],
         },
       ],
       admin: {
