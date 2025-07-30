@@ -8,7 +8,7 @@ export const Produse: CollectionConfig = {
   },
   versions: {
     drafts: {
-      autosave: { showSaveDraftButton: true },
+      autosave: { showSaveDraftButton: true, interval: 800 * 5 },
     },
   },
   access: {
@@ -66,7 +66,31 @@ export const Produse: CollectionConfig = {
         },
       ],
     },
-    { name: 'descriere', type: 'textarea', admin: { rows: 4 } },
+    {
+      type: 'tabs',
+      tabs: [
+        {
+          label: 'descriere',
+          admin: { description: 'descriere scurtă în liste produse' },
+          fields: [{ name: 'descriere', type: 'textarea', admin: { rows: 4 } }],
+        },
+        {
+          label: 'extra',
+          admin: { description: 'descriere markdown în pagina produsului' },
+          fields: [
+            {
+              name: 'descriere_md',
+              type: 'code',
+              admin: {
+                language: 'mdx',
+                // https://payloadcms.com/docs/fields/code#admin-options
+                editorOptions: { fontSize: 14 },
+              },
+            },
+          ],
+        },
+      ],
+    },
     {
       name: 'variante',
       type: 'array',
@@ -86,7 +110,13 @@ export const Produse: CollectionConfig = {
         disableBulkEdit: true,
       },
     },
-    { name: 'imagini', type: 'relationship', relationTo: 'imgprod', hasMany: true },
+    {
+      name: 'imagini',
+      type: 'relationship',
+      relationTo: 'imgprod',
+      hasMany: true,
+      admin: { appearance: 'drawer' },
+    },
     {
       type: 'collapsible',
       label: 'Import data',

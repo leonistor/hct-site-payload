@@ -261,6 +261,7 @@ export interface Produse {
    */
   url_producator?: string | null;
   descriere?: string | null;
+  descriere_md?: string | null;
   /**
    * Variante de produs
    */
@@ -655,6 +656,7 @@ export interface ProduseSelect<T extends boolean = true> {
   materiale?: T;
   url_producator?: T;
   descriere?: T;
+  descriere_md?: T;
   variante?:
     | T
     | {

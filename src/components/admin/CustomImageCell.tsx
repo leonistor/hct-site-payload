@@ -36,11 +36,8 @@ export const MyComponent = async ({ cellData, payload }: DefaultServerCellCompon
     <div
       style={{
         position: 'relative',
-        // width: '80px',
-        // height: '60px',
+        justifySelf: 'center',
         // marginTop: '-5px',
-        // marginBottom: '-5px',
-        // transform: 'scale(0.6)',
         // border: '3px solid',
       }}
     >
