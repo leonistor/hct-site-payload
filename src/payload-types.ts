@@ -277,6 +277,13 @@ export interface Produse {
         id?: string | null;
       }[]
     | null;
+  /**
+   * default image
+   */
+  default_img?: (number | null) | Imgprod;
+  /**
+   * other images
+   */
   imagini?: (number | Imgprod)[] | null;
   /**
    * descrierea originala in engleza de pe site producator
@@ -672,6 +679,7 @@ export interface ProduseSelect<T extends boolean = true> {
         imagine?: T;
         id?: T;
       };
+  default_img?: T;
   imagini?: T;
   descriere_en?: T;
   updatedAt?: T;

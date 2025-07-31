@@ -12,7 +12,6 @@ cu SEBA
 LEO
 
 - multiple imgprod -> mark main image on prod / new field mainimage
-- descriere_md (code!) in tab cu descriere
 - add image to varianta?
 - custom block name for Variante
 - materiale: 1/2 words, rest descriere; admin icon show

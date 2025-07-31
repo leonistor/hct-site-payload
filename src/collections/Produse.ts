@@ -91,7 +91,7 @@ export const Produse: CollectionConfig = {
               admin: {
                 language: 'mdx',
                 // https://payloadcms.com/docs/fields/code#admin-options
-                editorOptions: { fontSize: 14 },
+                editorOptions: { fontSize: 14, lineNumbers: 'off' },
               },
             },
           ],
@@ -132,12 +132,36 @@ export const Produse: CollectionConfig = {
         },
       },
     },
+    // default image & gallery
     {
-      name: 'imagini',
-      type: 'relationship',
-      relationTo: 'imgprod',
-      hasMany: true,
-      admin: { appearance: 'drawer' },
+      type: 'tabs',
+      tabs: [
+        {
+          label: 'Default Image',
+          admin: { description: 'default image' },
+          fields: [
+            {
+              name: 'default_img',
+              type: 'relationship',
+              relationTo: 'imgprod',
+              admin: { appearance: 'drawer', width: '20%', description: 'default image' },
+            },
+          ],
+        },
+        {
+          label: 'Gallery',
+          admin: { description: 'extra images' },
+          fields: [
+            {
+              name: 'imagini',
+              type: 'relationship',
+              relationTo: 'imgprod',
+              hasMany: true,
+              admin: { appearance: 'drawer', width: '80%', description: 'other images' },
+            },
+          ],
+        },
+      ],
     },
     {
       type: 'collapsible',
