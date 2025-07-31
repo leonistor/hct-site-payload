@@ -1,22 +1,13 @@
 TODO
 
-cu SEBA
-
-- ok versiuni prod
-- logo?
-- primary color
-- texte
-  - despre noi
-  - en/de/it
-
 LEO
 
-- multiple imgprod -> mark main image on prod / new field mainimage
+-! backup db w/ timestamp to /build before build
+-! seed with default image & gallery
+
 - add image to varianta?
 - custom block name for Variante
-- materiale: 1/2 words, rest descriere; admin icon show
 - customize admin: group collections, logo, link to site
-- image picker for imgprod
 - Join relationthip pe Imgprod -> Parteneri/Produse
 - use changie: https://changie.dev/
 - version in footer

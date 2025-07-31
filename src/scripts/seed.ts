@@ -136,18 +136,22 @@ export const script = async (config: SanitizedConfig) => {
       // get partener from code
       const partener = created_partneri.get(partner)
 
-      // const { partner, name, url, name_ro, name_en, content_ro, content_en, imgs } = p
       // create produs
+
+      // extract first sentence from content_ro descriere
+      const first_sentence = content_ro.split('\n').slice(0, 3)[2]
+
       const created_produs = await payload.create({
         collection: 'produse',
         draft: true,
         data: {
           nume: name_ro,
           nume_en: name_en,
-          descriere: content_ro,
+          descriere: first_sentence,
           descriere_md: content_ro,
           _status: 'draft',
           partener: partener,
+          default_img: created_imgprods[0],
           imagini: created_imgprods,
           url_producator: url,
           descriere_en: content_en,
