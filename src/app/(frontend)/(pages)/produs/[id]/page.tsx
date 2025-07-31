@@ -3,6 +3,8 @@ import config from '@payload-config'
 import { Categorii, Imgprod, Parteneri } from '@/payload-types'
 import Link from 'next/link'
 import Image from 'next/image'
+import { MDXRemote } from 'next-mdx-remote-client/rsc'
+import { Separator } from '@/components/ui/separator'
 
 export default async function Produs({ params }: { params: Promise<{ id: string }> }) {
   const payload = await getPayload({ config })
@@ -32,24 +34,29 @@ export default async function Produs({ params }: { params: Promise<{ id: string 
   const poza_height = default_img.sizes!.thumbnail!.height!
 
   return (
-    <div className="flex flex-row pt-4 gap-8">
-      <div className="flex-2/3 flex flex-col gap-4">
-        <h2 className="text-3xl leading-10 sm:text-4xl md:text-[40px] md:leading-[3.25rem] font-bold tracking-tight">
-          {nume}
-        </h2>
-        <p>{descriere}</p>
-        <p>Partener: {partener.nume}</p>
-        {/* <p>{categorie as string}</p> */}
-        <code>{url_producator}</code>
-        <div>
-          Categorie: <Link href={`/categorii/${categorie_id}`}>{categorie_denumire}</Link>
+    <div>
+      {/* main */}
+      <div className="flex flex-row pt-4 gap-8">
+        <div className="flex-2/3 flex flex-col gap-4">
+          <h2 className="text-3xl leading-10 sm:text-4xl md:text-[40px] md:leading-[3.25rem] font-bold tracking-tight">
+            {nume}
+          </h2>
+          <p>{descriere}</p>
+          <p>Partener: {partener.nume}</p>
+          <code>{url_producator}</code>
+          <div>
+            Categorie: <Link href={`/categorii/${categorie_id}`}>{categorie_denumire}</Link>
+          </div>
+          <div>Materiale:</div>
         </div>
-        <div>Materiale:</div>
+        {/*  */}
+        <div className="flex-1/3">
+          <Image src={poza_src} alt="" width={poza_width} height={poza_height} />
+        </div>
       </div>
-      {/*  */}
-      <div className="flex-1/3">
-        <Image src={poza_src} alt="" width={poza_width} height={poza_height} />
-      </div>
+      <Separator className="m-4" />
+      {/* markdown */}
+      <MDXRemote source={descriere_md!} />
     </div>
   )
 }
