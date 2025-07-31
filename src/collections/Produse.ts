@@ -156,5 +156,6 @@ export const Produse: CollectionConfig = {
   admin: {
     useAsTitle: 'nume',
     defaultColumns: ['nume', 'categorie', 'partener', 'promo', '_status'],
+    group: 'Content',
   },
 }

@@ -13,6 +13,9 @@ export const Media: CollectionConfig = {
     },
   ],
   enableQueryPresets: true,
+  admin: {
+    group: 'Catalog',
+  },
   upload: {
     staticDir: 'public/media',
     adminThumbnail: 'thumbnail',

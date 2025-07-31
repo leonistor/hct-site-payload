@@ -40,5 +40,8 @@ export const Parteneri: CollectionConfig = {
     { name: 'descriere', type: 'textarea' },
     { name: 'url', type: 'text' },
   ],
-  admin: { useAsTitle: 'nume' },
+  admin: {
+    useAsTitle: 'nume',
+    group: 'Catalog',
+  },
 }

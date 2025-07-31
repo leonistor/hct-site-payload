@@ -14,6 +14,9 @@ export const ImaginiProduse: CollectionConfig = {
     { name: 'partener', type: 'relationship', relationTo: 'parteneri', required: false },
   ],
   enableQueryPresets: true,
+  admin: {
+    group: 'Content',
+  },
   upload: {
     staticDir: 'public/imgprod',
     mimeTypes: ['image/*'],
