@@ -20,9 +20,9 @@
 - [ ] testimonials --> de pe site (h-ct) (Referinte)
 - [ ] videos -> descarca din src de la https://h-ct.ro/galerie-video.php
       prima si ultimele doua
-- [ ] map in contact (https://www.google.com/maps/place/Hategan+Consulting+%26+Trading/@45.6506453,25.6351587,17z/
-      data=!3m2!4b1!5s0x40b35c68f7de544d:0xd6dbf371333260f7!4m6!3m5!1s0x40b35da40b5d0083:0x81d1bea36d74abd2!8m2!3d45.6506416!4d25.637733
-      6!16s%2Fg%2F11k8l98ch6?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D)
+- [ ] map in contact
+
+<!-- [Google Maps](https://www.google.com/maps/place/Hategan+Consulting+%26+Trading/@45.6506453,25.6351587,17z/ data=!3m2!4b1!5s0x40b35c68f7de544d:0xd6dbf371333260f7!4m6!3m5!1s0x40b35da40b5d0083:0x81d1bea36d74abd2!8m2!3d45.6506416!4d25.637733 6!16s%2Fg%2F11k8l98ch6?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D) -->
 
 ### Nice-to-have
 
@@ -31,7 +31,11 @@
 - keep versions and show in admin/site
 - [ ] generate changelog using [changie](https://changie.dev/)
 
-## <center> ~ </center>
+---
+
+<p style="text-align:center">~</p>
+
+---
 
 ## components
 
