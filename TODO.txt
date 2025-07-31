@@ -5,7 +5,7 @@ LEO
 x! backup db w/ timestamp to /build before build
 x! seed with default image & gallery
 - icon picker
-- upgrade payload
+- upgrade payload (https://github.com/r1tsuu/payload-enchants/tree/master/packages/bump-payload)
 - sqlite backup
 
 - add image to varianta?

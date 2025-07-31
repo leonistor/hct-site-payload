@@ -1,25 +1,37 @@
 # Payload for HCT
 
-## content
-
-- categorii gata in payload, la desc gasesti partenerii cu ele
-- all products from pocketbase
-
 ## TODO
 
-- [ ] site v0.1 (despre noi pe prima pagina) saptamana asta
-- [ ] propuneri logo catre Seba pentru Ioana
-- [ ] "draft" la produse
-- [x] clean db script
-- [x] imgprod missing placeholder with logo
-- [x] use falso fake data
-- [x] random materiale in produs (es-toolkit sampleSize)
+### dev
+
+- [ ] bump payload version
+- [ ] sqlite automatic backup (see [DEPLOY litestream](DEPLOY.md))
+- [ ] deploy to `hct.vitrina.promo`
+- [ ] custom block name pt variante produs
+- [ ] use markdown from descriere field
+- [ ] implement search
+
+### content
+
+- [ ] ca la bronneberg: cursor mouse pe carousel, CTA buttons, main nav
+- [ ] coolors: make pallete, primary = sapphire (https://palettemaker.com/colors/sapphire)
+- [ ] nav: mai lat, similar bronneberg
+- [ ] video player (demo)
+- [ ] testimonials --> de pe site (h-ct) (Referinte)
+- [ ] videos -> descarca din src de la https://h-ct.ro/galerie-video.php
+      prima si ultimele doua
+- [ ] map in contact (https://www.google.com/maps/place/Hategan+Consulting+%26+Trading/@45.6506453,25.6351587,17z/
+      data=!3m2!4b1!5s0x40b35c68f7de544d:0xd6dbf371333260f7!4m6!3m5!1s0x40b35da40b5d0083:0x81d1bea36d74abd2!8m2!3d45.6506416!4d25.637733
+      6!16s%2Fg%2F11k8l98ch6?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D)
+
+### Nice-to-have
+
 - [ ] display collection count in admin dashboard: see `payload-theme-quantum-leap`
-- [ ] beautify lists in admin
-- [ ] i18n ro
-- [ ] docker deploy (see articles below)
-- [ ] mailer
-- [x] versions/drafts? NEIN (https://payloadcms.com/docs/versions/overview)
+- [ ] icon picker (see plugins)
+- keep versions and show in admin/site
+- [ ] generate changelog using [changie](https://changie.dev/)
+
+## <center> ~ </center>
 
 ## components
 
@@ -31,14 +43,19 @@ see [COMPONENTS.md](docs/COMPONENTS.md)
 - es-toolkit: https://es-toolkit.dev/usage.html
 - Falso Fake Data for All Your Real Needs: https://ngneat.github.io/falso/docs/getting-started
 
+## maybe payload plugins
+
+- bump versions: https://github.com/r1tsuu/payload-enchants/tree/master/packages/bump-payload
+- icon picker 1: https://github.com/shefing/payload-tools/tree/main/packages/icon-select
+- icon picker 2: https://github.com/innovixx/payload-icon-picker-field
+- adaptive videos: https://github.com/cgilly2fast/plugin-adaptive-bitrate-videos
+- switch env: https://github.com/elliott-w/payload-plugin-switch-env
+
 ## tools
 
 - emoji picker: https://www.freetool.dev/emoji-picker/
 - GitHub - cloudfour/simple-svg-placeholder: A very simple placeholder image generator with zero dependencies.: https://github.com/cloudfour/simple-svg-placeholder
-
-## favicon
-
-- https://realfavicongenerator.net/
+- favicon: https://realfavicongenerator.net/
 
 ## articles
 
@@ -46,58 +63,3 @@ see [DEPLOY.md](docs/DEPLOY.md).
 
 - Running Next.js with Docker: https://markus.oberlehner.net/blog/running-nextjs-with-docker
 - Deploying a Next.js app to production using Docker: https://codeparrot.ai/blogs/deploy-nextjs-app-with-docker-complete-guide-for-2025
-
-## take from payload (examples/templates):
-
-- move nextjs toolbar (nextjs config)
-
-```js
-devIndicators: {
-    position: 'bottom-right',
-  },
-
-```
-
-- Media collection
-
-```js
-upload: {
-    // Upload to the public/media directory in Next.js making them publicly accessible even outside of Payload
-    staticDir: path.resolve(dirname, '../../public/media'),
-    adminThumbnail: 'thumbnail',
-    focalPoint: true,
-    imageSizes: [
-      {
-        name: 'thumbnail',
-        width: 300,
-      },
-      {
-        name: 'square',
-        width: 500,
-        height: 500,
-      },
-      {
-        name: 'small',
-        width: 600,
-      },
-      {
-        name: 'medium',
-        width: 900,
-      },
-      {
-        name: 'large',
-        width: 1400,
-      },
-      {
-        name: 'xlarge',
-        width: 1920,
-      },
-      {
-        name: 'og',
-        width: 1200,
-        height: 630,
-        crop: 'center',
-      },
-    ],
-  },
-```
