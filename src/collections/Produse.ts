@@ -32,6 +32,7 @@ export const Produse: CollectionConfig = {
       required: true,
       admin: { description: 'nume original in engleza' },
     },
+    // partners, categories
     {
       type: 'row',
       fields: [
@@ -49,6 +50,7 @@ export const Produse: CollectionConfig = {
         },
       ],
     },
+    // promo, materiale
     {
       type: 'row',
       fields: [
@@ -73,6 +75,7 @@ export const Produse: CollectionConfig = {
         },
       ],
     },
+    // descriere
     {
       type: 'tabs',
       tabs: [
@@ -98,6 +101,7 @@ export const Produse: CollectionConfig = {
         },
       ],
     },
+    // variante
     {
       name: 'variante',
       type: 'array',
