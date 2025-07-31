@@ -13,26 +13,33 @@ const query: Where = {
 
 import { Table } from 'flowers-nextjs-table'
 import type { ColumnDef } from 'flowers-nextjs-table'
-import { Imgprod, Produse } from '@/payload-types'
+import { Imgprod, Parteneri, Produse } from '@/payload-types'
+import Image from 'next/image'
+import Link from 'next/link'
 
-type Item = {
-  id: string
-  nume: string
-  desc: string
-  url: string
-  image: string
-}
-
-// 2. Create your column definitions
-const columns: ColumnDef<Item>[] = [
+const columns: ColumnDef<Produse>[] = [
   {
-    accessorKey: 'nume',
-    header: 'Denumire Name',
-    enableSorting: true, // This column is now sortable
+    accessorKey: 'default_img',
+    header: '',
+    cell: (row) => {
+      const imgprod = row.default_img! as Imgprod
+      const imgsrc = imgprod.url!
+      return <Image src={imgsrc} width={200} height={200} alt={row.nume} />
+    },
   },
   {
-    accessorKey: 'desc',
-    header: 'Descriere',
+    accessorKey: 'nume',
+    header: 'Nume',
+    enableSorting: true,
+    cell: (row) => <Link href={`/produs/${row.id}`}>{row.nume}</Link>,
+  },
+  {
+    accessorKey: 'partener',
+    header: 'Partener',
+    cell: (row) => {
+      const partener = row.partener! as Parteneri
+      return <Link href={`/partener/${partener.id}`}>{partener.nume}</Link>
+    },
   },
 ]
 
@@ -45,28 +52,20 @@ export default function DemoLista() {
   if (isLoading) return <div>Loading...</div>
   if (error) return <div>Error: {error.message}</div>
 
-  const items: Item[] = data!.docs.map((p) => {
-    const img = p.imagini![0] as Imgprod
-    return {
-      id: p.id.toString(),
-      nume: p.nume,
-      desc: p.descriere!,
-      url: p.url_producator!,
-      image: img.url!,
-    }
-  })
+  const items = data!.docs
 
   return (
     <div className="p-4">
-      <Table<Item>
+      <Table<Produse>
         data={items}
         columns={columns}
+        paginationMode="auto"
+        itemsPerPage={5}
         classNames={{
           container: '',
           table: 'w-full text-sm',
           thead: '',
           th: 'p-3 font-medium text-left',
-          tr: 'hover:bg-gray-50',
           td: 'p-3 border-t border-gray-200',
           resizer: 'w-1 bg-gray-300 hover:bg-blue-500 cursor-col-resize',
           pagination: {
