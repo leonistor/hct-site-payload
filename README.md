@@ -4,7 +4,6 @@
 
 ### dev
 
-- [ ] bump payload version
 - [ ] sqlite automatic backup (see [DEPLOY litestream](DEPLOY.md))
 - [ ] deploy to `hct.vitrina.promo`
 - [ ] custom block name pt variante produs
@@ -36,6 +35,16 @@
 <p style="text-align:center">~</p>
 
 ---
+
+## bump payload
+
+Manual:
+
+- search current version (`3.48`) in `package.json`
+- check payload packages `@payload...`
+- replace with new version (`3.49.1`)
+- `bun install`
+- run tests: `bun run test:e2e`
 
 ## components
 
