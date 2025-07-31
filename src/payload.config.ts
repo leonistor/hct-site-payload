@@ -25,6 +25,13 @@ export default buildConfig({
     importMap: {
       baseDir: path.resolve(dirname),
     },
+    components: {
+      graphics: {
+        Icon: {
+          path: '@/components/admin/AdminLogo.tsx#Logo',
+        },
+      },
+    },
     autoLogin:
       process.env.NODE_ENV === 'development'
         ? {
