@@ -21,7 +21,7 @@ export default async function Carousel() {
       id: p.id.toString(),
       title: p.nume,
       summary: p.descriere!,
-      url: p.url_producator!,
+      url: `/produs/${p.id}`,
       image: img.url!,
     }
   })

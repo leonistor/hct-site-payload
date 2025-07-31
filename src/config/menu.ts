@@ -45,6 +45,11 @@ export const navigationLinks: Partial<MenuItem>[] = [
         description:
           'Reciclarea metalelor, aluminiului, cablurilor. Vehicule scoase din uz, Motoare, DEEE, Hidrapulper. Deșeuri solide urbane. Conserve. Metale mixte.',
       },
+      {
+        href: '/lista',
+        label: 'Toate produsele',
+        description: '',
+      },
     ],
   },
   {
