@@ -79,13 +79,5 @@ export default buildConfig({
       scriptPath: path.resolve(dirname, 'scripts/clean.ts'),
       key: 'clean',
     },
-    {
-      scriptPath: path.resolve(dirname, 'scripts/demo.ts'),
-      key: 'demo',
-    },
-    {
-      scriptPath: path.resolve(dirname, 'scripts/clean-demo.ts'),
-      key: 'cleandemo',
-    },
   ],
 })

@@ -4,6 +4,7 @@ LEO
 
 -! backup db w/ timestamp to /build before build
 -! seed with default image & gallery
+- upgrade payload
 
 - add image to varianta?
 - custom block name for Variante
