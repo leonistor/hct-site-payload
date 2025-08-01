@@ -68,6 +68,7 @@ export default async function Produs({ params }: { params: Promise<{ id: string 
         </div>
       </div>
       <Separator className="m-4" />
+      {/* TODO: pass width height */}
       <ProdCarousel images={imagini_carousel} />
       <Separator className="m-4" />
       {/* markdown */}

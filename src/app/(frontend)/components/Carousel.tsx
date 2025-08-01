@@ -15,6 +15,7 @@ export default async function Carousel() {
   })
 
   const carouselProducts: GalleryItem[] = promoProducts.docs.map((p) => {
+    // TODO: replace with default image
     const img = p.imagini![0] as Imgprod
 
     return {

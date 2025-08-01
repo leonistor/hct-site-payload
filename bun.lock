@@ -46,6 +46,7 @@
         "radix-ui": "^1.4.2",
         "react": "19.1.0",
         "react-circle-flags": "^0.0.23",
+        "react-layout-masonry": "^2.0.0",
         "react-zoom-pan-pinch": "^3.7.0",
         "sharp": "0.34.2",
         "swr": "^2.3.4",
@@ -1958,6 +1959,8 @@
     "react-image-crop": ["react-image-crop@10.1.8", "", { "peerDependencies": { "react": ">=16.13.1" } }, "sha512-4rb8XtXNx7ZaOZarKKnckgz4xLMvds/YrU6mpJfGhGAsy2Mg4mIw1x+DCCGngVGq2soTBVVOxx2s/C6mTX9+pA=="],
 
     "react-is": ["react-is@17.0.2", "", {}, "sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w=="],
+
+    "react-layout-masonry": ["react-layout-masonry@2.0.0", "", { "peerDependencies": { "react": ">=19" } }, "sha512-2ZTYHQ1KLuRblCf9wPhkLFHlhHtvNIAAjlnWrclZjZ4Re+Bp8wneuKf9uDO2R4mfzY/WvCe2QrKWTGuef2MgyQ=="],
 
     "react-refresh": ["react-refresh@0.17.0", "", {}, "sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ=="],
 
