@@ -81,7 +81,7 @@ export const script = async (config: SanitizedConfig) => {
   ok = await confirm('Create parteneri?')
   if (ok) {
     result = imp_parteneri.map(async (p) => {
-      const { id, name, url } = p
+      const { id, name, descriere, url } = p
 
       // logo partener
       let imageFilePath = `${BASE}partner_logos/logo_${id}.png`
@@ -99,6 +99,7 @@ export const script = async (config: SanitizedConfig) => {
         data: {
           cod: id,
           nume: name,
+          descriere: descriere,
           logo: uploadedImage,
           url: url,
         },

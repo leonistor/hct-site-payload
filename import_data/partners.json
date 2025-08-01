@@ -2,36 +2,43 @@
   {
     "id": "panizzolo",
     "name": "Panizzolo",
+    "descriere": "Producător de linii de reciclare la cheie.",
     "url": "https://www.panizzolo.com/en/"
   },
   {
     "id": "husmann",
     "name": "Husmann",
+    "descriere": "Compactoare și stații de transfer.",
     "url": "https://husmann-umwelt-technik.de/?lang=en"
   },
   {
     "id": "mistra",
     "name": "Mistra",
+    "descriere": "Foarfeci manuale și automate.",
     "url": "https://mistra.cz/"
   },
   {
     "id": "bronneberg",
     "name": "Bronneberg",
+    "descriere": "Soluții dedicate pentru toate tipurile de materiale: metale, electronice, hârtie, etc.",
     "url": "https://www.bronneberg-recycling.co.uk/"
   },
   {
     "id": "iris",
     "name": "Iris Mec",
+    "descriere": "Soluții și utilaje pentru reciclarea componentelor auto.",
     "url": "https://www.iris-mec.com/"
   },
   {
     "id": "holmatro",
     "name": "Holmatro",
+    "descriere": "Peste 55 de ani de experiență în scule și sisteme hidraulice de înaltă presiune, foarfeci și tăietoare industriale.",
     "url": "https://www.holmatro.com/en/rescue/cutting-spreading/cutters"
   },
   {
     "id": "tecnoecology",
     "name": "Tecnoecology",
+    "descriere": "Tecnoecology Srl proiectează și produce soluții inovatoare pentru prelucrarea cablurilor. Instalațiile de granulare a cablurilor Tecnoecology sunt cunoscute pentru calitate și inovație.",
     "url": "https://tecnoecology.com/en/"
   }
 ]
