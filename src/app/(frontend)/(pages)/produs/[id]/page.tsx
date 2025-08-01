@@ -8,6 +8,7 @@ import { Separator } from '@/components/ui/separator'
 import { JSX, ClassAttributes, HTMLAttributes } from 'react'
 import { ListaBadgeMateriale } from '@/components/materiale/badge-materiale'
 import { Badge } from '@/components/ui/badge'
+import ProdCarousel from '@/components/prod-carousel/prod-carousel'
 
 export default async function Produs({ params }: { params: Promise<{ id: string }> }) {
   const payload = await getPayload({ config })
@@ -36,6 +37,10 @@ export default async function Produs({ params }: { params: Promise<{ id: string 
   const poza_width = default_img.sizes!.thumbnail!.width!
   const poza_height = default_img.sizes!.thumbnail!.height!
 
+  const imagini_carousel = (imagini as Imgprod[])!.map((imagine) => {
+    return { title: imagine.alt!, url: imagine.sizes!.thumbnail!.url! }
+  })
+
   return (
     <div>
       {/* main */}
@@ -62,6 +67,8 @@ export default async function Produs({ params }: { params: Promise<{ id: string 
           <Image src={poza_src} alt="" width={poza_width} height={poza_height} />
         </div>
       </div>
+      <Separator className="m-4" />
+      <ProdCarousel images={imagini_carousel} />
       <Separator className="m-4" />
       {/* markdown */}
       <MDXRemote source={descriere_md!} components={custom} />
