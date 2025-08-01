@@ -7,8 +7,12 @@
 - [ ] sqlite automatic backup (see [DEPLOY litestream](DEPLOY.md))
 - [ ] deploy to `hct.vitrina.promo`
 - [ ] custom block name pt variante produs
+- [ ] attrib Produse: link pagina extra
+- [ ] preview (extra param)
 - [ ] use markdown from descriere field
 - [ ] implement search
+- [ ] implement preview
+- [ ] translate: mistra direct cz, panizzolo, tecno drect it
 
 ### content
 
