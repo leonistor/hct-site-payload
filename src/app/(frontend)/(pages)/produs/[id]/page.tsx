@@ -7,6 +7,7 @@ import { MDXRemote } from 'next-mdx-remote-client/rsc'
 import { Separator } from '@/components/ui/separator'
 import { JSX, ClassAttributes, HTMLAttributes } from 'react'
 import { ListaBadgeMateriale } from '@/components/materiale/badge-materiale'
+import { Badge } from '@/components/ui/badge'
 
 export default async function Produs({ params }: { params: Promise<{ id: string }> }) {
   const payload = await getPayload({ config })
@@ -47,7 +48,10 @@ export default async function Produs({ params }: { params: Promise<{ id: string 
           <p>Partener: {partener.nume}</p>
           <code>{url_producator}</code>
           <div>
-            Categorie: <Link href={`/categorii/${categorie_id}`}>{categorie_denumire}</Link>
+            Categorie:{' '}
+            <Badge asChild variant="secondary" className="bg-blue-500 text-white dark:bg-blue-600">
+              <Link href={`/categorii/${categorie_id}`}>{categorie_denumire}</Link>
+            </Badge>
           </div>
           <div>
             Materiale: <ListaBadgeMateriale materiale={materiale as Materiale[]} />
