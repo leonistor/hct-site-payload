@@ -47,8 +47,13 @@ export const navigationLinks: Partial<MenuItem>[] = [
       },
       {
         href: '/lista',
-        label: 'Toate produsele',
-        description: '',
+        label: 'Toate produsele - Tabel',
+        description: 'Toate produsele sub forma de tabel',
+      },
+      {
+        href: '/grid',
+        label: 'Toate produsele - Grid',
+        description: 'Toate produsele sub forma de grid',
       },
     ],
   },

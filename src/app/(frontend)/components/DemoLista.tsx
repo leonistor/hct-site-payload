@@ -36,6 +36,7 @@ const columns: ColumnDef<Produse>[] = [
   {
     accessorKey: 'partener',
     header: 'Partener',
+    enableSorting: true,
     cell: (row) => {
       const partener = row.partener! as Parteneri
       return <Link href={`/partener/${partener.id}`}>{partener.nume}</Link>
