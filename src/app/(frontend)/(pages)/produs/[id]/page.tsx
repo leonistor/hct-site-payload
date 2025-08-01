@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { MDXRemote } from 'next-mdx-remote-client/rsc'
 import { Separator } from '@/components/ui/separator'
+import { JSX, ClassAttributes, HTMLAttributes, HtmlHTMLAttributes } from 'react'
 
 export default async function Produs({ params }: { params: Promise<{ id: string }> }) {
   const payload = await getPayload({ config })
@@ -56,7 +57,20 @@ export default async function Produs({ params }: { params: Promise<{ id: string 
       </div>
       <Separator className="m-4" />
       {/* markdown */}
-      <MDXRemote source={descriere_md!} />
+      <MDXRemote source={descriere_md!} components={custom} />
     </div>
   )
+}
+// https://www.tybarho.com/articles/improving-mdx-code-editor-theme-highlight-line-numbers
+type CompProps = JSX.IntrinsicAttributes &
+  ClassAttributes<HTMLHeadingElement> &
+  HTMLAttributes<HTMLElement>
+
+const custom = {
+  h3: (props: CompProps) => <h3 className="text-3xl font-bold mt-4 mb-1.5" {...props} />,
+  h4: (props: CompProps) => <h4 className="text-2xl font-semibold mt-4 mb-1" {...props} />,
+  hr: (
+    props: JSX.IntrinsicAttributes & ClassAttributes<HTMLHRElement> & HTMLAttributes<HTMLHRElement>,
+  ) => <hr className="my-16 border-zinc-300" {...props} />,
+  //   a: props => <a {...props} target="_blank" rel="noopener noreferrer" />,
 }
