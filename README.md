@@ -26,6 +26,7 @@
 ### Nice-to-have
 
 - [ ] display collection count in admin dashboard: see `payload-theme-quantum-leap`
+- [ ] material/categorie "dynamic" icon, https://github.com/pepew-le-boss/dynamic-icons-nextjs/blob/master/src/components/Icon5.tsx
 - [ ] icon picker (see plugins)
 - keep versions and show in admin/site
 - [ ] generate changelog using [changie](https://changie.dev/)

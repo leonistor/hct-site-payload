@@ -1,11 +1,12 @@
 import { getPayload } from 'payload'
 import config from '@payload-config'
-import { Categorii, Imgprod, Parteneri } from '@/payload-types'
+import { Categorii, Imgprod, Materiale, Parteneri } from '@/payload-types'
 import Link from 'next/link'
 import Image from 'next/image'
 import { MDXRemote } from 'next-mdx-remote-client/rsc'
 import { Separator } from '@/components/ui/separator'
-import { JSX, ClassAttributes, HTMLAttributes, HtmlHTMLAttributes } from 'react'
+import { JSX, ClassAttributes, HTMLAttributes } from 'react'
+import { ListaBadgeMateriale } from '@/components/materiale/badge-materiale'
 
 export default async function Produs({ params }: { params: Promise<{ id: string }> }) {
   const payload = await getPayload({ config })
@@ -48,7 +49,9 @@ export default async function Produs({ params }: { params: Promise<{ id: string 
           <div>
             Categorie: <Link href={`/categorii/${categorie_id}`}>{categorie_denumire}</Link>
           </div>
-          <div>Materiale:</div>
+          <div>
+            Materiale: <ListaBadgeMateriale materiale={materiale as Materiale[]} />
+          </div>
         </div>
         {/*  */}
         <div className="flex-1/3">
