@@ -16,6 +16,7 @@
 
 ### content
 
+- [ ] restul de produse ALL cu translate
 - [ ] ca la bronneberg: cursor mouse pe carousel, CTA buttons, main nav
 - [ ] coolors: make pallete, primary = sapphire (https://palettemaker.com/colors/sapphire)
 - [ ] nav: mai lat, similar bronneberg
