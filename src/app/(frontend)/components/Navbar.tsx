@@ -1,6 +1,4 @@
-/*
-https://originui.com/navbar
-*/
+// https://originui.com/navbar
 
 import { BookOpenIcon, InfoIcon, LifeBuoyIcon } from 'lucide-react'
 
@@ -124,7 +122,8 @@ export default function Navbar() {
                           {link.label}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent className="data-[motion=from-end]:slide-in-from-right-16! data-[motion=from-start]:slide-in-from-left-16! data-[motion=to-end]:slide-out-to-right-16! data-[motion=to-start]:slide-out-to-left-16! z-50 p-1">
-                          <ul className={cn(link.type === 'description' ? 'min-w-64' : 'min-w-48')}>
+                          {/* <ul className={cn(link.type === 'description' ? 'min-w-64' : 'min-w-48')}> */}
+                          <ul className={cn(link.type === 'description' ? 'min-w-96' : 'min-w-72')}>
                             {link.items!.map((item, itemIndex) => (
                               <li key={itemIndex}>
                                 <NavigationMenuLink href={item.href} className="py-1.5">
@@ -160,7 +159,8 @@ export default function Navbar() {
                                   {link.type === 'description' && 'description' in item ? (
                                     <div className="space-y-1">
                                       <div className="font-medium">{item.label}</div>
-                                      <p className="text-muted-foreground line-clamp-2 text-xs">
+                                      {/* <p className="text-muted-foreground line-clamp-2 text-xs"> */}
+                                      <p className="text-muted-foreground line-clamp-6 text-xs">
                                         {item.description}
                                       </p>
                                     </div>
