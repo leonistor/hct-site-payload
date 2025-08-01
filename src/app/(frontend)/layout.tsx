@@ -32,7 +32,7 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
           enableSystem
           disableTransitionOnChange
         >
-          <div className="mx-auto container min-h-screen flex flex-col">
+          <div className="mx-auto container max-w-5xl min-h-screen flex flex-col">
             <Header />
             <main className="grow">{children}</main>
             <Footer />

@@ -60,6 +60,7 @@
     "radix-ui": "^1.4.2",
     "react": "19.1.0",
     "react-circle-flags": "^0.0.23",
+    "react-zoom-pan-pinch": "^3.7.0",
     "sharp": "0.34.2",
     "swr": "^2.3.4",
     "tailwind-merge": "^3.3.1",
