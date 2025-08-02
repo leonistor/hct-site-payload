@@ -35,6 +35,7 @@
 - [ ] icon picker (see plugins)
 - keep versions and show in admin/site
 - [ ] generate changelog using [changie](https://changie.dev/)
+- [ ] site change de studiat (https://github.com/dgtlmoon/changedetection.io)
 
 ---
 
