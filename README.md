@@ -4,7 +4,7 @@
 
 ### dev
 
-- [ ] sqlite automatic backup (see [DEPLOY litestream](DEPLOY.md))
+- [ ] sqlite automatic backup (see [DEPLOY litestream](docs/DEPLOY.md))
 - [ ] deploy to `hct.vitrina.promo`
 - [ ] custom block name pt variante produs
 - [ ] attrib Produse: link pagina extra
