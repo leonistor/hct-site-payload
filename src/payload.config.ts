@@ -56,6 +56,7 @@ export default buildConfig({
     },
   }),
   sharp,
+  /*
   email: nodemailerAdapter({
     defaultFromAddress: 'info@payloadcms.com',
     defaultFromName: 'Payload',
@@ -66,6 +67,7 @@ export default buildConfig({
       auth: false,
     },
   }),
+  */
   plugins: [
     payloadCloudPlugin(),
     // storage-adapter-placeholder
